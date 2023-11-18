@@ -124,7 +124,7 @@
                 <div class="company-footer">
 
                     <img class="logo-yyt-log" src="/img/logoOficialOficial.png">
-                    <h3>Charlie</h3>
+                    <h3>Bravo</h3>
                     <p>A loja que todo Otaku Br Ama!</p>
 
                 </div>
@@ -182,7 +182,7 @@
             </div>
             <div class="footer-bottom">
             <div class="wrapper">
-                <p>@Charlie - 2023</p>
+                <p>@Bravo - 2023</p>
             </div>
             </div>
             </footer>

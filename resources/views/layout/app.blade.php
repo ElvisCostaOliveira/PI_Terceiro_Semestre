@@ -30,7 +30,7 @@
     <!-- Link do favcon -->
     <link rel="shortcut icon" href="./LOGO/logo-favicon.png" type="image/x-icon">
 
-    <title>Charlie</title>
+    <title>Bravo</title>
 </head>
     <body>
 
@@ -177,7 +177,7 @@
     </div>
     <div class="footer-bottom">
         <div class="wrapper">
-            <p>@Charlie - 2023</p>
+            <p>@Bravo - 2023</p>
         </div>
     </div>
     </footer>

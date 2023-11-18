@@ -27,7 +27,7 @@
     <!-- Link do favcon -->
     <link rel="shortcut icon" href="./LOGO/logo-favicon.png" type="image/x-icon">
 
-    <title>Charlie</title>
+    <title>Bravo</title>
     <main>@yield('main')</main>
 
 </head>
