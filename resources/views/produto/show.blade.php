@@ -9,7 +9,7 @@
 
     <title>Ticket Bravo</title>
 
-    <link rel="shortcut icon" href="../../images/logo.svg">
+    <link rel="shortcut icon" href="../images/logo.svg">
 
     <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/apple-touch-icon-57x57.png">
@@ -252,23 +252,7 @@
                                                                         <span class="m-nav__link-text">Login</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="/meus-ingressos" class="m-nav__link"
-                                                                        tabindex="0">
-                                                                        <i
-                                                                            class="m-nav__link-icon flaticon-interface-10"></i>
-                                                                        <span class="m-nav__link-text">Meus
-                                                                            Ingressos</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="/minha-carteira" class="m-nav__link"
-                                                                        tabindex="0">
-                                                                        <i class="m-nav__link-icon flaticon-coins"></i>
-                                                                        <span class="m-nav__link-text">Minha
-                                                                            Carteira</span>
-                                                                    </a>
-                                                                </li>
+                                                                                                                                
                                                                 <li class="m-nav__item">
                                                                     <a href="/meus-pedidos" class="m-nav__link"
                                                                         tabindex="0">
@@ -277,23 +261,7 @@
                                                                             Pedidos</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="/cadastro/verificacao" class="m-nav__link"
-                                                                        tabindex="0">
-                                                                        <i
-                                                                            class="m-nav__link-icon flaticon-technology-1"></i>
-                                                                        <span class="m-nav__link-text">Certificação de
-                                                                            Cadastro</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="/central-de-ajuda" class="m-nav__link"
-                                                                        tabindex="0" target="_blank">
-                                                                        <i class="m-nav__link-icon flaticon-chat-1"></i>
-                                                                        <span class="m-nav__link-text">Central de
-                                                                            Ajuda</span>
-                                                                    </a>
-                                                                </li>
+                                                                
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -389,64 +357,50 @@
                                 width="100%" style="max-height: 200px;" class="img-fluid">
                         </div>
                         <div class="m-portlet__body m--padding-bottom-5">
-                            <div class="m-section m--margin-bottom-5">
-                                <div class="m-section__content">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h4 class="media-heading notranslate">{{$produto->PRODUTO_NOME}}</h4>
-                                            <p>
-                                                <i class="flaticon-interface-10"></i> &nbsp
-                                                Categoria: {{$produto->Categoria->CATEGORIA_NOME}}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row m-row--col-separator-xl m--padding-top-10 m--padding-bottom-10">
-                                        <div class="col-lg-4 notranslate">
-                                            <strong>Quantidade disponivel:</strong>
-                                            <br>
-                                            {{$produto->PRODUTO_QTD}}
-                                        </div>
-
-                                        <div class="col-lg-4">
-                                            <strong>Valor original:</strong><br>
-                                            R${{$produto->PRODUTO_PRECO}}
-                                        </div>
-
-                                        <div class="col-lg-4">
-                                            <strong>Desconto:</strong><br>
-                                            R${{$produto->PRODUTO_DESCONTO}}
-                                        </div>
+                            
+                        <div class="m-section m--margin-bottom-5">
+                            <div class="m-section__content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h4 class="media-heading notranslate">{{$produto->PRODUTO_NOME}}</h4>
+                                        <p>
+                                            <i class="flaticon-interface-10"></i> &nbsp Categoria: {{$produto->Categoria->CATEGORIA_NOME}}
+                                        </p>
                                     </div>
                                 </div>
 
+                                <div class="row m-row--col-separator-xl m--padding-top-10 m--padding-bottom-10">
+                                    <!-- Seções de quantidade disponível, valor original e desconto -->
+                                </div>
+                            </div>
 
-                                <span>Valor do produto com desconto: R${{$produto->PRODUTO_PRECO -
-                                    $produto->PRODUTO_DESCONTO}}</span><br><br><br>
-                                @if(!Auth::check())
+                            <span>Valor do produto com desconto: R${{$produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO}}</span><br><br><br>
 
-                                <div>
+                            @if(!Auth::check())
+                                
+                                <div class="btn btn-warning btn-lg m-btn m-btn--icon" style="padding-top: 12px; padding-bottom: 12px;">
                                     <label for="">Adicionar quantidade</label>
                                     <input type="number" name="ITEM_QTD" min="1" value="1">
+
+                                    <button type="button" class="flaticon-interface-10" onclick="showPopup()">Adicionar ao carrinho</button>
                                 </div>
 
-                                @else
-                                <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
+                                <script>
+                                    function showPopup() {
+                                        var shouldRedirect = confirm("Você precisa estar logado para adicionar ao carrinho. Deseja fazer o login agora?");
+                                        if (shouldRedirect) {
+                                            window.location.href = "{{ route('register') }}";
+                                        }
+                                    }
+                                </script>
+                            @else
+                                <form method="POST" action="{{ route('carrinho.store', $produto->PRODUTO_ID) }}">
                                     @csrf
-                                    
-                                    <div class="btn btn-warning btn-lg m-btn m-btn--icon "
-                                    style="padding-top: 12px; padding-bottom: 12px;">
-                                        <label for="">Adicionar quantidade</label>
-                                        <input type="number" name="ITEM_QTD" min="1" value="1">
-
-                                        <button type="submit" class="flaticon-interface-10" onclick="aviso()" >Adicionar ao
-                                            carrinho</button>
-                                    </div>
-
+                                    <!-- Seções de formulário para usuários autenticados -->
                                 </form>
-                                @endif
+                            @endif
+                        </div>
 
-                            </div>
 
                         </div>
                     </div>
