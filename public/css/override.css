@@ -161,25 +161,25 @@ body, html{
 .type.flip .back {-webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .type.flip .front {-webkit-transform: rotateY(0); transform: rotateY(0);}
 .type .back, .type .front {width: 32px; height: 23px; display: inline-block; vertical-align: middle; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
-.type .back {background: url(../images/card-back.png) no-repeat; position: absolute; top: 0; z-index: 2; height: 23px; width: 34px;}
-.type .front {background: url(../images/card-generico.png) no-repeat; position: absolute; top: 0; z-index: 8; height: 23px; width: 34px; -webkit-transform: rotateY(-180deg); transform: rotateY(-180deg);}
+.type .back {background: url(../../images/card-back.png) no-repeat; position: absolute; top: 0; z-index: 2; height: 23px; width: 34px;}
+.type .front {background: url(../../images/card-generico.png) no-repeat; position: absolute; top: 0; z-index: 8; height: 23px; width: 34px; -webkit-transform: rotateY(-180deg); transform: rotateY(-180deg);}
 
-.ccv{position: absolute; right: 20px; top: 33px; width: 45px; height: 26px; display: block; -webkit-transform: perspective(100px); transform: perspective(100px); background:url(../images/card-ccv.png) no-repeat;}
+.ccv{position: absolute; right: 20px; top: 33px; width: 45px; height: 26px; display: block; -webkit-transform: perspective(100px); transform: perspective(100px); background:url(../../images/card-ccv.png) no-repeat;}
 
-.type.visa .front{background-image:url(../images/card-visa.jpg)!important}
-.type.master .front{background-image:url(../images/card-master.jpg)!important}
-.type.amex .front{background-image:url(../images/card-amex.jpg)!important}
-.type.diners .front{background-image:url(../images/card-diners.jpg)!important}
-.type.elo .front{background-image:url(../images/card-elo.jpg)!important}
-.type.jcb .front{background-image:url(../images/card-jcb.jpg)!important}
-.type.discover .front{background-image:url(../images/card-discover.jpg)!important}
-.type.aura .front{background-image:url(../images/card-aura.jpg)!important}
-.type.hiper .front{background-image:url(../images/card-hiper.jpg)!important}
+.type.visa .front{background-image:url(../../images/card-visa.jpg)!important}
+.type.master .front{background-image:url(../../images/card-master.jpg)!important}
+.type.amex .front{background-image:url(../../images/card-amex.jpg)!important}
+.type.diners .front{background-image:url(../../images/card-diners.jpg)!important}
+.type.elo .front{background-image:url(../../images/card-elo.jpg)!important}
+.type.jcb .front{background-image:url(../../images/card-jcb.jpg)!important}
+.type.discover .front{background-image:url(../../images/card-discover.jpg)!important}
+.type.aura .front{background-image:url(../../images/card-aura.jpg)!important}
+.type.hiper .front{background-image:url(../../images/card-hiper.jpg)!important}
 
 /* Tela de cadastro */
 .hideShowPassword-toggle {
     background: transparent;
-    background-image: url('../images/wink.svg');
+    background-image: url('../../images/wink.svg');
     background-position: 0 center;
     background-repeat: no-repeat;
     border: 0;

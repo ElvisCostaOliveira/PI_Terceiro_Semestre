@@ -2,32 +2,32 @@
 <html lang="pt-br">
 
 <head>
-    <script async="" src="js/gtm.js"></script>
-    <script async="" src="js/gtm_1.js"></script>
+    <script async="" src="../js/gtm.js"></script>
+    <script async="" src="../js/gtm_1.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
     <title>Ticket Bravo</title>
 
-    <link rel="shortcut icon" href="images/logo.svg">
+    <link rel="shortcut icon" href="../images/logo.svg">
 
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-180x180.png">
 
     <meta name="kdt:page" content="home">
     <meta property="og:title" content="Ticket Bravo">
     <meta property="og:description" content="CULTURA E ENTRETENIMENTO ATRAVÉS DE UM CLICK">
-    <meta property="og:image" content="images/KVFacebook.png">
-    <meta property="og:url" content="https://www.Ticket Bravo.com.br/">
+    <meta property="og:image" content="../images/KVFacebook.png">
+    <meta property="og:url" content="https://www.ticketbravo.com.br/">
     <meta property="og:type" content="website">
-    <script src="js/webfont.js"></script>
+    <script src="../js/webfont.js"></script>
     <script>
         WebFont.load({
             google: {
@@ -39,11 +39,11 @@
         });
     </script>
 
-    <script src="js/vendors.bundle.js"></script>
+    <script src="../js/vendors.bundle.js"></script>
 
-    <link href="css/vendors.bundle.css" rel="stylesheet" type="text/css">
-    <link href="css/style.bundle.css" rel="stylesheet" type="text/css">
-    <link href="css/override.css" rel="stylesheet" type="text/css">
+    <link href="../css/vendors.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../css/override.css" rel="stylesheet" type="text/css">
 
     <!-- Google Tag Manager -->
     <script>
@@ -80,8 +80,8 @@
 
     <!-- End Google Tag Manager -->
 
-    <script data-ad-client="ca-pub-3376281802197214" async="" src="js/adsbygoogle.js"></script>
-    <script id="kdtjs" type="text/javascript" async="" src="js/k.js"></script>
+    <script data-ad-client="ca-pub-3376281802197214" async="" src="../js/adsbygoogle.js"></script>
+    <script id="kdtjs" type="text/javascript" async="" src="../js/k.js"></script>
 </head>
 
 <body class="m-page--wide m-header--fixed m-header--fixed-mobile m-footer--push m-aside--offcanvas-default "
@@ -226,7 +226,7 @@
                                                 <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
                                                 <div class="m-dropdown__inner">
                                                     <div class="m-dropdown__header m--align-center"
-                                                        style="background: url('images/notification_bg.jpg'); background-size: cover;">
+                                                        style="background: url('../images/notification_bg.jpg'); background-size: cover;">
                                                         <span class="m-dropdown__header-title">0 Nova(s)</span>
                                                         <span class="m-dropdown__header-subtitle">Central de
                                                             Notificações</span>
@@ -264,7 +264,7 @@
                                                     class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
                                                 <div class="m-dropdown__inner">
                                                     <div class="m-dropdown__header m--align-center"
-                                                        style="background: url('images/user_profile_bg.jpg'); background-size: cover;">
+                                                        style="background: url('../images/user_profile_bg.jpg'); background-size: cover;">
                                                         <div class="m-card-user m-card-user--skin-dark">
                                                             <div class="m-card-user__pic">
                                                                 <i class="flaticon-user m--icon-font-size-lg5"></i>
@@ -457,88 +457,88 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/sub-categoria/1485/camarote-essepe?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Camarote Essepê" class="notranslate">
-                                        <img src="images/577.jpeg" alt="Camarote Essepê" class="img-fluid">
+                                        <img src="../images/577.jpeg" alt="Camarote Essepê" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27852/ingressos-para-jorge-e-mateus-e-pedro-libe?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Jorge &amp; Mateus - Estância" class="notranslate">
-                                        <img src="images/625.jpg" alt="Jorge &amp; Mateus - Estância" class="img-fluid">
+                                        <img src="../images/625.jpg" alt="Jorge &amp; Mateus - Estância" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27561/ingressos-para-reveillon-da-garoa-2024?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Reveillon da Garoa - Unimed" class="notranslate">
-                                        <img src="images/575-20231104113859.jpg" alt="Reveillon da Garoa - Unimed"
+                                        <img src="../images/575-20231104113859.jpg" alt="Reveillon da Garoa - Unimed"
                                             class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/sub-categoria/1493/um-festival?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Um Festival" class="notranslate">
-                                        <img src="images/614.jpg" alt="Um Festival" class="img-fluid">
+                                        <img src="../images/614.jpg" alt="Um Festival" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/restart?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Restart" class="notranslate">
-                                        <img src="images/540.jpg" alt="Restart" class="img-fluid">
+                                        <img src="../images/540.jpg" alt="Restart" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27989/ingressos-para-kamaitachi-lancamento-do-album-festa?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Kamaitachi - Audio" class="notranslate">
-                                        <img src="images/626.jpg" alt="Kamaitachi - Audio" class="img-fluid">
+                                        <img src="../images/626.jpg" alt="Kamaitachi - Audio" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/28082/ingressos-para-djavan-data-extra?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Djavan Data Extra - Jeunesse" class="notranslate">
-                                        <img src="images/618.jpg" alt="Djavan Data Extra - Jeunesse" class="img-fluid">
+                                        <img src="../images/618.jpg" alt="Djavan Data Extra - Jeunesse" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27788/ingressos-para-lulu-santos-baritono-no-aramacan?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Lulu Santos - Aramaçan" class="notranslate">
-                                        <img src="images/622.jpg" alt="Lulu Santos - Aramaçan" class="img-fluid">
+                                        <img src="../images/622.jpg" alt="Lulu Santos - Aramaçan" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27209/ingressos-para-reggae-live-station-com-the-wailers-ponto-de-equilibrio-e-planta-e-raiz?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Reggae Live Station" class="notranslate">
-                                        <img src="images/624.jpg" alt="Reggae Live Station" class="img-fluid">
+                                        <img src="../images/624.jpg" alt="Reggae Live Station" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/spcacustico?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="SPC O Último Encontro" class="notranslate">
-                                        <img src="images/491-20230615122335.jpg" alt="SPC O Último Encontro"
+                                        <img src="../images/491-20230615122335.jpg" alt="SPC O Último Encontro"
                                             class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/28156/ingressos-para-um-baita-festival-com-the-calling-capital-inicial-nando-reis-e-mais?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Um Baita Festival - Fazenda" class="notranslate">
-                                        <img src="images/623.jpg" alt="Um Baita Festival - Fazenda" class="img-fluid">
+                                        <img src="../images/623.jpg" alt="Um Baita Festival - Fazenda" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/sub-categoria/1464/nomade-festival?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Nomade Festival" class="notranslate">
-                                        <img src="images/615-20231110102229.jpg" alt="Nomade Festival"
+                                        <img src="../images/615-20231110102229.jpg" alt="Nomade Festival"
                                             class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/jota25arenas?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Jota25 Arenas" class="notranslate">
-                                        <img src="images/597-20231008155234.jpg" alt="Jota25 Arenas" class="img-fluid">
+                                        <img src="../images/597-20231008155234.jpg" alt="Jota25 Arenas" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27644/ingressos-para-garota-vip-sao-paulo?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Garota Vip - São Paulo" class="notranslate">
-                                        <img src="images/556.jpg" alt="Garota Vip - São Paulo" class="img-fluid">
+                                        <img src="../images/556.jpg" alt="Garota Vip - São Paulo" class="img-fluid">
                                     </a>
                                 </div>
                             </div>
@@ -546,23 +546,21 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="categoriaSelect">Selecione a Categoria:</label>
-                        <select class="form-control" id="categoriaSelect">
-                            <option value="">Todas as Categorias</option>
-                            @foreach(\App\Models\Categoria::all() as $categoria)
-                            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+    <label for="categoriaSelect">Selecione a Categoria:</label>
+    <select class="form-control" id="categoriaSelect">
+        <option value="">Todas as Categorias</option>
+        @foreach(\App\Models\Categoria::all() as $categoria)
+            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
+        @endforeach
+    </select>
+</div>
 
-                    <div id="produtosContainer" class="row">
-                        @foreach(\App\Models\Produto::all() as $produto)
-                        <div class="col-6 col-md-3 col-lg-2 produto"
-                            data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
-                            <div
-                                class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
-                                <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
-
+<div id="produtosContainer" class="row">
+    @foreach(\App\Models\Produto::all() as $produto)
+        <div class="col-6 col-md-3 col-lg-2 produto" data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
+            <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
+                <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
+                    
                                     <div class="m-portlet__head m-portlet__head--fit">
                                         <div class="m-portlet__head-caption">&nbsp;</div>
                                     </div>
@@ -613,20 +611,29 @@
 
                     </div>
                     <script>
-    document.getElementById("categoriaSelect").addEventListener("change",                           = this.value;
+    document.getElementById("categoriaSelect").addEventListener("change", function() {
+        var categoriaSelecionada = this.value;
 
-        // Oculta                               var pro                            lectorAll(".produto");
-                               nction(produ                            o.style.display                                    // Mostra apenas                            a selecionada
-        if (                             "") {
-                                  dos = docum                            roduto[data-categoria='" + categoriaSelecionada + "']");
-            produtosFiltrad                        prod               produtoFiltrs                        block";
-                            });
-        } else {                             // Se nenhuma categ                                , mostra todos os produtos
-                                      or                        ctio                        o) {
-                produto.style.di                            ck";
+        // Oculta todos os produtos
+        var produtos = document.querySelectorAll(".produto");
+        produtos.forEach(function(produto) {
+            produto.style.display = "none";
+        });
+
+        // Mostra apenas os produtos da categoria selecionada
+        if (categoriaSelecionada !== "") {
+            var produtosFiltrados = document.querySelectorAll(".produto[data-categoria='" + categoriaSelecionada + "']");
+            produtosFiltrados.forEach(function(produtoFiltrado) {
+                produtoFiltrado.style.display = "block";
             });
-                              });
-                    </script>
+        } else {
+            // Se nenhuma categoria selecionada, mostra todos os produtos
+            produtos.forEach(function(produto) {
+                produto.style.display = "block";
+            });
+        }
+    });
+</script>
 
                     <div class="row">
                     </div>
@@ -743,16 +750,17 @@
                 </div>
 
                 <script>
-                                                   -carousel").owlCarousel({
-                                    items: 1,
-                                    animateIn: "                        ,
+                    $(".owl-carousel").owlCarousel({
+                        items: 1,
+                        animateIn: "fadeIn(300)",
                         loop: true,
                         autoplay: true,
-                                                     layTimeou                    
-                                    autoplayHover                        
-                                          false,
-                                    nav: true,
-                        navText: ['<i class="fa fa-arrow-alt-circle-right" style="font-size: 40px;"                                         });
+                        autoplayTimeout: 5000,
+                        autoplayHoverPause: true,
+                        dots: false,
+                        nav: true,
+                        navText: ['<i class="fa fa-arrow-alt-circle-right" style="font-size: 40px;"></i>'],
+                    });
                 </script>
 
                 <!-- Google Analytics -->
@@ -777,8 +785,8 @@
 
     </div>
 
-    <script src="js/scripts.bundle.js"></script>
-    <script src="js/messages_ptbr.js"></script>
+    <script src="../js/scripts.bundle.js"></script>
+    <script src="../js/messages_ptbr.js"></script>
 
     <script>
         var e;
@@ -790,7 +798,8 @@
         };
 
         jQuery(document).ready(function () {
-            BootstrapSelect.init();     });
+            BootstrapSelect.init();
+        });
     </script>
 
     <!-- BEGIN KONDUTO CODE -->
@@ -805,7 +814,10 @@
             kdt.async = true;
             'https://i.k-analytix.co         var s = document.getElementsByTagName('body')[0];
             ren
-        })        var visitorID;
+        }) ();
+
+
+        var visitorID;
         (function () {
             var period = 300;
             var nTry = 0;
