@@ -210,6 +210,42 @@
                                                 </span>
                                             </a>
                                         </li>
+                                        <li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width"
+                                            m-dropdown-toggle="click" m-dropdown-persistent="1">
+                                            <a href="#" class="m-nav__link m-dropdown__toggle"
+                                                id="m_topbar_notification_icon" tabindex="0">
+                                                <span class="m-nav__link-icon">
+                                                    <span class="m-nav__link-icon-wrapper">
+                                                        <i class="flaticon-music-2">
+                                                            <span class="m--hide">Notificações</span>
+                                                        </i>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                            <div class="m-dropdown__wrapper">
+                                                <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
+                                                <div class="m-dropdown__inner">
+                                                    <div class="m-dropdown__header m--align-center"
+                                                        style="background: url('../images/notification_bg.jpg'); background-size: cover;">
+                                                        <span class="m-dropdown__header-title">0 Nova(s)</span>
+                                                        <span class="m-dropdown__header-subtitle">Central de
+                                                            Notificações</span>
+                                                    </div>
+                                                    <div class="m-dropdown__body">
+                                                        <div class="m-dropdown__content">
+                                                            <div class="m-stack m-stack--ver m-stack--general"
+                                                                style="min-height: 180px;">
+                                                                <div
+                                                                    class="m-stack__item m-stack__item--center m-stack__item--middle">
+                                                                    <span class="">Tudo certo!<br>Nenhuma
+                                                                        notificação.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
                                             m-dropdown-toggle="click">
                                             <a href="#" class="m-nav__link m-dropdown__toggle" tabindex="0">
@@ -250,6 +286,7 @@
                                                                         <span class="m-nav__link-text">Login</span>
                                                                     </a>
                                                                 </li>
+                                                               
                                                                 <li class="m-nav__item">
                                                                     <a href="/meus-pedidos" class="m-nav__link"
                                                                         tabindex="0">
@@ -393,8 +430,7 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27852/ingressos-para-jorge-e-mateus-e-pedro-libe?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Jorge &amp; Mateus - Estância" class="notranslate">
-                                        <img src="../images/625.jpg" alt="Jorge &amp; Mateus - Estância"
-                                            class="img-fluid">
+                                        <img src="../images/625.jpg" alt="Jorge &amp; Mateus - Estância" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -425,8 +461,7 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/28082/ingressos-para-djavan-data-extra?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Djavan Data Extra - Jeunesse" class="notranslate">
-                                        <img src="../images/618.jpg" alt="Djavan Data Extra - Jeunesse"
-                                            class="img-fluid">
+                                        <img src="../images/618.jpg" alt="Djavan Data Extra - Jeunesse" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -451,8 +486,7 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/28156/ingressos-para-um-baita-festival-com-the-calling-capital-inicial-nando-reis-e-mais?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Um Baita Festival - Fazenda" class="notranslate">
-                                        <img src="../images/623.jpg" alt="Um Baita Festival - Fazenda"
-                                            class="img-fluid">
+                                        <img src="../images/623.jpg" alt="Um Baita Festival - Fazenda" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -465,8 +499,7 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/jota25arenas?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Jota25 Arenas" class="notranslate">
-                                        <img src="../images/597-20231008155234.jpg" alt="Jota25 Arenas"
-                                            class="img-fluid">
+                                        <img src="../images/597-20231008155234.jpg" alt="Jota25 Arenas" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -480,23 +513,21 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="categoriaSelect">Selecione a Categoria:</label>
-                        <select class="form-control" id="categoriaSelect">
-                            <option value="">Todas as Categorias</option>
-                            @foreach(\App\Models\Categoria::all() as $categoria)
-                            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+    <label for="categoriaSelect">Selecione a Categoria:</label>
+    <select class="form-control" id="categoriaSelect">
+        <option value="">Todas as Categorias</option>
+        @foreach(\App\Models\Categoria::all() as $categoria)
+            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
+        @endforeach
+    </select>
+</div>
 
-                    <div id="produtosContainer" class="row">
-                        @foreach(\App\Models\Produto::all() as $produto)
-                        <div class="col-6 col-md-3 col-lg-2 produto"
-                            data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
-                            <div
-                                class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
-                                <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
-
+<div id="produtosContainer" class="row">
+    @foreach(\App\Models\Produto::all() as $produto)
+        <div class="col-6 col-md-3 col-lg-2 produto" data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
+            <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
+                <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
+                    
                                     <div class="m-portlet__head m-portlet__head--fit">
                                         <div class="m-portlet__head-caption">&nbsp;</div>
                                     </div>
@@ -512,43 +543,38 @@
                                                 @endif
                                             </div>
                                             <style>
-                                                .fixed-width-button {
-                                                    width: 165px;
-                                                }
-                                            </style>
+    .fixed-width-button {
+        width: 165px;
+        color: #4adedd;
+    }
+</style>
 
-                                            <div
-                                                class="m-widget19__content m--margin-top-15 m--margin-right-5 m--margin-bottom-5">
-                                                <div class="m-widget3">
-                                                    <div class="m-widget3__item m--marginless">
-                                                        <div class="m-widget3__header">
-                                                            <div class="m-widget3__info">
-                                                                <span class="m-widget3__username"
-                                                                    style="display:block; height:40px; overflow:hidden; text-overflow:clip;">
-                                                                    {{$produto->PRODUTO_NOME}}
-                                                                </span><br>
-                                                                <div class="m-widget3__time" style="font-size:.90rem">
-                                                                    R${{$produto->PRODUTO_PRECO}}
+<div class="m-widget19__content m--margin-top-15 m--margin-right-5 m--margin-bottom-5">
+    <div class="m-widget3">
+        <div class="m-widget3__item m--marginless">
+            <div class="m-widget3__header">
+                <div class="m-widget3__info">
+                    <span class="m-widget3__username"
+                        style="display:block; height:40px; overflow:hidden; text-overflow:clip;">
+                        {{$produto->PRODUTO_NOME}}
+                    </span><br>
+                    <div class="m-widget3__time" style="font-size:.90rem">
+                        R${{$produto->PRODUTO_PRECO}}
 
-                                                                    <div class="row m--padding-bottom-15">
-                                                                        <div class="col">
-                                                                            <form
-                                                                                action="{{route('produto.show', $produto->PRODUTO_ID)}}"
-                                                                                method="POST">
-                                                                                @csrf
-                                                                                <button type="submit"
-                                                                                    class="btn btn-warning btn-block buttonLogin fixed-width-button">Comprar</button>
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
+                        <div class="row m--padding-bottom-15">
+                            <div class="col">
+                                <form action="{{route('produto.show', $produto->PRODUTO_ID)}}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button">Comprar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                                         </div>
                                     </div>
@@ -559,29 +585,29 @@
 
                     </div>
                     <script>
-                        document.getElementById("categoriaSelect").addEventListener("change", function () {
-                            var categoriaSelecionada = this.value;
+    document.getElementById("categoriaSelect").addEventListener("change", function() {
+        var categoriaSelecionada = this.value;
 
-                            // Oculta todos os produtos
-                            var produtos = document.querySelectorAll(".produto");
-                            produtos.forEach(function (produto) {
-                                produto.style.display = "none";
-                            });
+        // Oculta todos os produtos
+        var produtos = document.querySelectorAll(".produto");
+        produtos.forEach(function(produto) {
+            produto.style.display = "none";
+        });
 
-                            // Mostra apenas os produtos da categoria selecionada
-                            if (categoriaSelecionada !== "") {
-                                var produtosFiltrados = document.querySelectorAll(".produto[data-categoria='" + categoriaSelecionada + "']");
-                                produtosFiltrados.forEach(function (produtoFiltrado) {
-                                    produtoFiltrado.style.display = "block";
-                                });
-                            } else {
-                                // Se nenhuma categoria selecionada, mostra todos os produtos
-                                produtos.forEach(function (produto) {
-                                    produto.style.display = "block";
-                                });
-                            }
-                        });
-                    </script>
+        // Mostra apenas os produtos da categoria selecionada
+        if (categoriaSelecionada !== "") {
+            var produtosFiltrados = document.querySelectorAll(".produto[data-categoria='" + categoriaSelecionada + "']");
+            produtosFiltrados.forEach(function(produtoFiltrado) {
+                produtoFiltrado.style.display = "block";
+            });
+        } else {
+            // Se nenhuma categoria selecionada, mostra todos os produtos
+            produtos.forEach(function(produto) {
+                produto.style.display = "block";
+            });
+        }
+    });
+</script>
 
                     <div class="row">
                     </div>
