@@ -545,12 +545,24 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="form-group">
+                        <label for="categoriaSelect">Selecione a Categoria:</label>
+                        <select class="form-control" id="categoriaSelect">
+                            <option value="">Todas as Categorias</option>
+                            @foreach(\App\Models\Categoria::all() as $categoria)
+                            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div id="produtosContainer" class="row">
                         @foreach(\App\Models\Produto::all() as $produto)
-                        <div class="col-6 col-md-3 col-lg-2">
+                        <div class="col-6 col-md-3 col-lg-2 produto"
+                            data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
                             <div
                                 class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
                                 <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
+
                                     <div class="m-portlet__head m-portlet__head--fit">
                                         <div class="m-portlet__head-caption">&nbsp;</div>
                                     </div>
@@ -600,6 +612,21 @@
                         @endforeach
 
                     </div>
+                    <script>
+    document.getElementById("categoriaSelect").addEventListener("change",                           = this.value;
+
+        // Oculta                               var pro                            lectorAll(".produto");
+                               nction(produ                            o.style.display                                    // Mostra apenas                            a selecionada
+        if (                             "") {
+                                  dos = docum                            roduto[data-categoria='" + categoriaSelecionada + "']");
+            produtosFiltrad                        prod               produtoFiltrs                        block";
+                            });
+        } else {                             // Se nenhuma categ                                , mostra todos os produtos
+                                      or                        ctio                        o) {
+                produto.style.di                            ck";
+            });
+                              });
+                    </script>
 
                     <div class="row">
                     </div>
@@ -716,17 +743,16 @@
                 </div>
 
                 <script>
-                    $(".owl-carousel").owlCarousel({
-                        items: 1,
-                        animateIn: "fadeIn(300)",
+                                                   -carousel").owlCarousel({
+                                    items: 1,
+                                    animateIn: "                        ,
                         loop: true,
                         autoplay: true,
-                        autoplayTimeout: 5000,
-                        autoplayHoverPause: true,
-                        dots: false,
-                        nav: true,
-                        navText: ['<i class="fa fa-arrow-alt-circle-right" style="font-size: 40px;"></i>'],
-                    });
+                                                     layTimeou                    
+                                    autoplayHover                        
+                                          false,
+                                    nav: true,
+                        navText: ['<i class="fa fa-arrow-alt-circle-right" style="font-size: 40px;"                                         });
                 </script>
 
                 <!-- Google Analytics -->
@@ -764,8 +790,7 @@
         };
 
         jQuery(document).ready(function () {
-            BootstrapSelect.init();
-        });
+            BootstrapSelect.init();     });
     </script>
 
     <!-- BEGIN KONDUTO CODE -->
@@ -780,10 +805,7 @@
             kdt.async = true;
             'https://i.k-analytix.co         var s = document.getElementsByTagName('body')[0];
             ren
-        }) ();
-
-
-        var visitorID;
+        })        var visitorID;
         (function () {
             var period = 300;
             var nTry = 0;
