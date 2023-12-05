@@ -44,42 +44,6 @@
     <link href="../css/vendors.bundle.css" rel="stylesheet" type="text/css">
     <link href="../css/style.bundle.css" rel="stylesheet" type="text/css">
     <link href="../css/override.css" rel="stylesheet" type="text/css">
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-P69G2JB');
-    </script>
-
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-W7NK6Z');
-    </script>
-
-    <!-- End Google Tag Manager -->
-
     <script data-ad-client="ca-pub-3376281802197214" async="" src="../js/adsbygoogle.js"></script>
     <script id="kdtjs" type="text/javascript" async="" src="../js/k.js"></script>
 </head>
@@ -137,22 +101,6 @@
                                         <img src="\img\logoOficial.png" width="150" alt="Bravo" tabindex="0">
                                     </a>
                                 </div>
-
-                                <div class="m-stack__item m-stack__item--middle m-brand__tools">
-
-                                    <a id="m_aside_header_menu_mobile_toggle" href="javascript:;" title="Categorias"
-                                        class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block"
-                                        tabindex="0">
-                                        <span>Categorias</span>
-                                    </a>
-
-                                    <a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" title="Menu"
-                                        class="m-brand__icon m--visible-tablet-and-mobile-inline-block" tabindex="0">
-                                        <i class="flaticon-more-1">
-                                            <span class="m--hide">Menu</span>
-                                        </i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                         <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
@@ -178,15 +126,15 @@
                                                 }
                                             </style>
 
+                                            <!-- Search de pesquisa -->
                                             <form id="frmPesquisar"
                                                 class="m-list-search__form m--padding-top-25-desktop m--margin-right-15-desktop"
-                                                method="get" action="/eventos/pesquisar">
+                                                method="GET" action="../produto">
                                                 <div class="m-typeahead">
                                                     <div class="m-input-icon m-input-icon--right">
-                                                        <input type="text" id="s" name="s"
+                                                        <input type="text" id="search" name="search"
                                                             class="form-control m-input m-input--pill"
-                                                            placeholder="Pesquise por artista, evento ou local..."
-                                                            autocomplete="off">
+                                                            placeholder="Pesquise pelo evento..." autocomplete="off">
                                                         <span class="m-input-icon__icon m-input-icon__icon--right">
                                                             <span>
                                                                 <i class="flaticon-search"></i>
@@ -196,8 +144,10 @@
                                                 </div>
                                             </form>
                                         </li>
+
+                                        <!-- Notificação de carrinho -->
                                         <li class="m-nav__item">
-                                            <a href="/meu-carrinho" class="m-nav__link" tabindex="0">
+                                            <a href="/carrinho" class="m-nav__link" tabindex="0">
                                                 <span class="m-nav__link-badge m-badge m-badge--success">0</span>
                                                 <span class="m-nav__link-icon">
                                                     <span class="m-nav__link-icon-wrapper">
@@ -210,42 +160,13 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width"
-                                            m-dropdown-toggle="click" m-dropdown-persistent="1">
-                                            <a href="#" class="m-nav__link m-dropdown__toggle"
-                                                id="m_topbar_notification_icon" tabindex="0">
-                                                <span class="m-nav__link-icon">
-                                                    <span class="m-nav__link-icon-wrapper">
-                                                        <i class="flaticon-music-2">
-                                                            <span class="m--hide">Notificações</span>
-                                                        </i>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                            <div class="m-dropdown__wrapper">
-                                                <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-                                                <div class="m-dropdown__inner">
-                                                    <div class="m-dropdown__header m--align-center"
-                                                        style="background: url('../images/notification_bg.jpg'); background-size: cover;">
-                                                        <span class="m-dropdown__header-title">0 Nova(s)</span>
-                                                        <span class="m-dropdown__header-subtitle">Central de
-                                                            Notificações</span>
-                                                    </div>
-                                                    <div class="m-dropdown__body">
-                                                        <div class="m-dropdown__content">
-                                                            <div class="m-stack m-stack--ver m-stack--general"
-                                                                style="min-height: 180px;">
-                                                                <div
-                                                                    class="m-stack__item m-stack__item--center m-stack__item--middle">
-                                                                    <span class="">Tudo certo!<br>Nenhuma
-                                                                        notificação.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+
+
+                                        <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                            m-dropdown-toggle="click">
+
+                                            @if(!Auth::check())
+
                                         <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
                                             m-dropdown-toggle="click">
                                             <a href="#" class="m-nav__link m-dropdown__toggle" tabindex="0">
@@ -259,6 +180,9 @@
                                                     </span>
                                                 </span>
                                             </a>
+
+
+
                                             <div class="m-dropdown__wrapper">
                                                 <span
                                                     class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
@@ -281,25 +205,94 @@
                                                         <div class="m-dropdown__content">
                                                             <ul class="m-nav m-nav--skin-light">
                                                                 <li class="m-nav__item">
-                                                                    <a href="/auth" class="m-nav__link" tabindex="0">
+                                                                    <a href="/login" class="m-nav__link" tabindex="0">
                                                                         <i class="m-nav__link-icon flaticon-lock-1"></i>
                                                                         <span class="m-nav__link-text">Login</span>
                                                                     </a>
                                                                 </li>
-                                                               
+
+
                                                                 <li class="m-nav__item">
-                                                                    <a href="/meus-pedidos" class="m-nav__link"
+                                                                    <a href="/register" class="m-nav__link"
                                                                         tabindex="0">
                                                                         <i class="m-nav__link-icon flaticon-notes"></i>
-                                                                        <span class="m-nav__link-text">Meus
-                                                                            Pedidos</span>
+                                                                        <span class="m-nav__link-text">Criar
+                                                                            conta</span>
                                                                     </a>
                                                                 </li>
+
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </li>
+
+                                        @else
+                                        <a href="#" class="m-nav__link m-dropdown__toggle" tabindex="0">
+                                            <span class="m-topbar__welcome m--hidden-mobile">Olá, &nbsp </span>
+                                            <span class="m-topbar__username m--hidden-mobile">{{ Auth::user()->USUARIO_NOME }}</span>
+                                            <span class="m-topbar__userpic">
+                                                <span class="m-nav__link-icon">
+                                                    <span class="m-nav__link-icon-wrapper">
+                                                        <i class="flaticon-user"></i>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <div class="m-dropdown__wrapper">
+                                            <span
+                                                class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                            <div class="m-dropdown__inner">
+                                                <div class="m-dropdown__header m--align-center"
+                                                    style="background: url('../images/user_profile_bg.jpg'); background-size: cover;">
+                                                    <div class="m-card-user m-card-user--skin-dark">
+                                                        <div class="m-card-user__pic">
+                                                            <i class="flaticon-user m--icon-font-size-lg5"></i>
+                                                        </div>
+                                                        <div class="m-card-user__details">
+                                                            <span class="m-card-user__name m--font-weight-500">{{ Auth::user()->USUARIO_NOME }}</span>
+                                                            <a href="{{ route('usuarios.show', Auth::user()->USUARIO_ID) }}"
+                                                                class="m-card-user__email m--font-weight-300 m-link">Ver perfil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <style>
+                                                    .m-nav__link:hover {
+                                                        text-decoration: none;
+                                                    }
+                                                </style>
+                                                <div class="m-dropdown__body">
+                                                    <div class="m-dropdown__content">
+                                                        <ul class="m-nav m-nav--skin-light">
+                                                            <li class="m-nav__item">
+                                                                <a href="/endereco" class="m-nav__link" tabindex="0">
+                                                                    <i class="m-nav__link-icon flaticon-map"></i>
+                                                                    <span class="m-nav__link-text">Meus Endereços</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="m-nav__item">
+                                                                <a href="/pedido" class="m-nav__link" tabindex="0">
+                                                                    <i class="m-nav__link-icon flaticon-notes"></i>
+                                                                    <span class="m-nav__link-text">Meus Pedidos</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="m-nav__item" style="margin-left: -15px;">
+                                                                <form method="POST" action="{{ route('logout') }}"
+                                                                    class="m-nav__link">
+                                                                    @csrf
+                                                                    <button class="btn" type="submit">
+                                                                        <i class="m-nav__link-icon flaticon-logout"></i>
+                                                                        <span class="m-nav__link-text">&nbsp Sair</span>
+                                                                    </button>
+                                                                </form>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endif
                                         </li>
                                     </ul>
                                 </div>
@@ -376,28 +369,30 @@
         </header>
 
         <script>
-            var zoom = 100;
+                  r zoom = 100;
             var contrast = false;
-            window.addEventListener("load", function (event) {
-                zoom = parseInt(window.localStorage.getItem('zoom')) || 100;
-                document.body.style.zoom = zoom + '%';
-
-                contrast = window.localStorage.getItem('contrast') == 'true' ? true : false;
-                if (contrast == true) {
-                    contrast = false;
-                    toggleContrast();
+            wind                istener("load", function (event)                       
+            zoom = parseInt(window.localStorage.getItem('zoom'|              
+            document.body.style.zoom = z                                
+            con                
+            ow.localStor                    
+            trast') == 'true' ? true : false;
+                     f (contrast == t                                    
+                     ontrast = false;
+                    t                    
                 }
-            });
-
-            function zoomOut() {
-                if (zoom > 100) {
-                    zoom = zoom - 10;
-                    window.localStorage.setItem('zoom', zoom);
-                    document.body.style.zoom = zoom + '%';
+                                 
+                function zoomOut() {
+                           m > 100) {
+                        zoom = zoom - 10;
+                    window.localStorage.set                 
+                    zoom);
+                    docum            
+                    .style.zoom = zoom + '%';
                 }
             }
 
-            function zoomIn() {
+        function zoomIn() {
                 if (zoom < 150) {
                     zoom = zoom + 10;
                     window.localStorage.setItem('zoom', zoom);
@@ -405,8 +400,7 @@
                 }
             }
 
-            function toggleContrast() {
-                contrast = !contrast;
+            function toggleContrast(    contrast = !contrast;
                 window.localStorage.setItem('contrast', contrast);
                 $(document.body).toggleClass('contrast');
             }
@@ -430,7 +424,8 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/27852/ingressos-para-jorge-e-mateus-e-pedro-libe?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Jorge &amp; Mateus - Estância" class="notranslate">
-                                        <img src="../images/625.jpg" alt="Jorge &amp; Mateus - Estância" class="img-fluid">
+                                        <img src="../images/625.jpg" alt="Jorge &amp; Mateus - Estância"
+                                            class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -461,7 +456,8 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/28082/ingressos-para-djavan-data-extra?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Djavan Data Extra - Jeunesse" class="notranslate">
-                                        <img src="../images/618.jpg" alt="Djavan Data Extra - Jeunesse" class="img-fluid">
+                                        <img src="../images/618.jpg" alt="Djavan Data Extra - Jeunesse"
+                                            class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -486,7 +482,8 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/evento/28156/ingressos-para-um-baita-festival-com-the-calling-capital-inicial-nando-reis-e-mais?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Um Baita Festival - Fazenda" class="notranslate">
-                                        <img src="../images/623.jpg" alt="Um Baita Festival - Fazenda" class="img-fluid">
+                                        <img src="../images/623.jpg" alt="Um Baita Festival - Fazenda"
+                                            class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -499,7 +496,8 @@
                                 <div class="carousel">
                                     <a href="https://www.Ticket Bravo.com.br/jota25arenas?utm_source=midia_Ticket Bravo&amp;utm_medium=cpc&amp;utm_campaign=banner"
                                         title="Jota25 Arenas" class="notranslate">
-                                        <img src="../images/597-20231008155234.jpg" alt="Jota25 Arenas" class="img-fluid">
+                                        <img src="../images/597-20231008155234.jpg" alt="Jota25 Arenas"
+                                            class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="carousel">
@@ -513,21 +511,23 @@
                     </div>
 
                     <div class="form-group">
-    <label for="categoriaSelect">Selecione a Categoria:</label>
-    <select class="form-control" id="categoriaSelect">
-        <option value="">Todas as Categorias</option>
-        @foreach(\App\Models\Categoria::all() as $categoria)
-            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
-        @endforeach
-    </select>
-</div>
+                        <label for="categoriaSelect">Selecione a Categoria:</label>
+                        <select class="form-control" id="categoriaSelect">
+                            <option value="">Todas as Categorias</option>
+                            @foreach(\App\Models\Categoria::all() as $categoria)
+                            <option value="{{ $categoria->CATEGORIA_ID }}">{{ $categoria->CATEGORIA_NOME }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
-<div id="produtosContainer" class="row">
-    @foreach(\App\Models\Produto::all() as $produto)
-        <div class="col-6 col-md-3 col-lg-2 produto" data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
-            <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
-                <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
-                    
+                    <div id="produtosContainer" class="row">
+                        @foreach(\App\Models\Produto::all() as $produto)
+                        <div class="col-6 col-md-3 col-lg-2 produto"
+                            data-categoria="{{ $produto->categoria->CATEGORIA_ID }}">
+                            <div
+                                class="m-portlet m-portlet--bordered-semi m-portlet--full-height m-portlet--rounded-force">
+                                <a title="{{$produto->PRODUTO_NOME}}" style="text-decoration: none;">
+
                                     <div class="m-portlet__head m-portlet__head--fit">
                                         <div class="m-portlet__head-caption">&nbsp;</div>
                                     </div>
@@ -543,38 +543,41 @@
                                                 @endif
                                             </div>
                                             <style>
-    .fixed-width-button {
-        width: 165px;
-        color: #4adedd;
-    }
-</style>
+                                                .fixed-width-button {
+                                                    width: 165px;
+                                                    color: #4adedd;
+                                                }
+                                            </style>
 
-<div class="m-widget19__content m--margin-top-15 m--margin-right-5 m--margin-bottom-5">
-    <div class="m-widget3">
-        <div class="m-widget3__item m--marginless">
-            <div class="m-widget3__header">
-                <div class="m-widget3__info">
-                    <span class="m-widget3__username"
-                        style="display:block; height:40px; overflow:hidden; text-overflow:clip;">
-                        {{$produto->PRODUTO_NOME}}
-                    </span><br>
-                    <div class="m-widget3__time" style="font-size:.90rem">
-                        R${{$produto->PRODUTO_PRECO}}
+                                            <div
+                                                class="m-widget19__content m--margin-top-15 m--margin-right-5 m--margin-bottom-5">
+                                                <div class="m-widget3">
+                                                    <div class="m-widget3__item m--marginless">
+                                                        <div class="m-widget3__header">
+                                                            <div class="m-widget3__info">
+                                                                <span class="m-widget3__username"
+                                                                    style="display:block; height:40px; overflow:hidden; text-overflow:clip;">
+                                                                    {{$produto->PRODUTO_NOME}}
+                                                                </span><br>
+                                                                <div class="m-widget3__time" style="font-size:.90rem">
+                                                                    R${{$produto->PRODUTO_PRECO}}
 
-                        <div class="row m--padding-bottom-15">
-                            <div class="col">
-                                <form action="{{route('produto.show', $produto->PRODUTO_ID)}}">
-                                    @csrf
-                                    <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button">Comprar</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                                                                    <div class="row m--padding-bottom-15">
+                                                                        <div class="col">
+                                                                            <form
+                                                                                action="{{route('produto.show', $produto->PRODUTO_ID)}}">
+                                                                                @csrf
+                                                                                <button type="submit"
+                                                                                    class="btn btn-warning btn-block buttonLogin fixed-width-button">Comprar</button>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -586,28 +589,21 @@
                     </div>
                     <script>
     document.getElementById("categoriaSelect").addEventListener("change", function() {
-        var categoriaSelecionada = this.value;
+        var categoriaSelecionad                        ue;
 
-        // Oculta todos os produtos
-        var produtos = document.querySelectorAll(".produto");
-        produtos.forEach(function(produto) {
-            produto.style.display = "none";
+        // Ocult                            tos
+        var pr                                erySelectorAll(".p                                odutos.forEach(function(produto) {
+                                        splay = "none";
         });
 
-        // Mostra apenas os produtos da categoria selecionada
-        if (categoriaSelecionada !== "") {
-            var produtosFiltrados = document.querySelectorAll(".produto[data-categoria='" + categoriaSelecionada + "']");
-            produtosFiltrados.forEach(function(produtoFiltrado) {
-                produtoFiltrado.style.display = "block";
-            });
-        } else {
-            // Se nenhuma categoria selecionada, mostra todos os produtos
-            produtos.forEach(function(produto) {
-                produto.style.display = "block";
+        //                            s                         cat                        ionada
+        if (c                            ada !== "") {
+                                    Filtrados = docume                                ".produto[data-categoria='" + categoriaSele                                         produtosFiltrados.forEach(func                            ra                                                   toFiltrado.style.display = "                                });
+        } else                            / Se nenhuma categoria selecionada, mostra todos os                                  produtos.forEach(function(produto) {                          to.style.display = "block";
             });
         }
     });
-</script>
+                    </script>
 
                     <div class="row">
                     </div>
@@ -724,16 +720,15 @@
                 </div>
 
                 <script>
-                    $(".owl-carousel").owlCarousel({
+                                    $(".owl-carousel").owlCarousel({
                         items: 1,
-                        animateIn: "fadeIn(300)",
-                        loop: true,
-                        autoplay: true,
-                        autoplayTimeout: 5000,
-                        autoplayHoverPause: true,
-                        dots: false,
-                        nav: true,
-                        navText: ['<i class="fa fa-arrow-alt-circle-right" style="font-size: 40px;"></i>'],
+                                         animateIn: "fadeIn(300)",
+                                        loop: true,
+                                        autoplay: true,
+                        autop                        ut: 5000,
+                         aut                            use: true,
+                                              fals                                           nav: true,
+                                                 ['<i class="fa fa-arrow-alt-circle                            e="font-size: 40px;"></i>'],
                     });
                 </script>
 
@@ -765,7 +760,7 @@
     <script>
         var e;
 
-        var BootstrapSelect = {
+        var BootstrapSelect = { 
             init: function () {
                 $(".m_selectpicker").selectpicker();
             }
@@ -784,24 +779,14 @@
         });
         {
             var kdt = ateElement('script');
-            kdt.kdt.type = 'tet';
-            kdt.async = true;
-            'https://i.k-analytix.co         var s = document.getElementsByTagName('body')[0];
-            ren
-        }) ();
-
-
-        var visitorID;
-        (function () {
-            var period = 300;
-            var nTry = 0;
-            var intervalID = setInterval(function () {
-                vaear          if ((typeof (Konduto) !== "undefined") &&
-                    (typeof (Konduto.getVisitorID) !== "undefined")) {
-                    visitorID = window.Konduto.getVisitorID();
-                    clear = true;
-                }
-                if (clear) {
+            kdt.kdt.typet               'https://i.k-analytix.co              getElement                       ren
+        })             rID;
+                       var period =            ry = 0;
+            var            l(function () {
+                      ((typeof (Kon            &
+                     uto.getVisitorID) !== "undefined")) {
+                    visitorID = window.Konduto            ar = true;
+                      if (clear) {
                     clearInterval(intervalID);
                 }
             }, period);
@@ -809,7 +794,7 @@
 
     </script>
     <script
-        type="text/javascript">window.NREUM || (NREUM = {}); NREUM            { "beaco            .nr-data.net", Key": "NRJS - f2d                917d", "applicatio                28151", "transactionNa                tVC0FSVBBZXApK                RFZLKAANVxsMXFdSHA == ", "queueTime": 0, "app                    9, "atts": "H0cARgNPGE8=", "errorBeaco                    .net", "agent": "" }</script>
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM                  "beaco            .nr-d            , Ke"NRl                          28151", "tr            nNa                          VBBZXApK                RFZL            XFdS             "                0, "app                    9, "a                gNPGE8=", "errorBeaco                        .net", "agent": "" }</script>
 
 </body>
 

@@ -1,188 +1,562 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script async="" src="../js/gtm.js"></script>
+    <script async="" src="../js/gtm_1.js"></script>
 
-    <!-- Icone na aba da tela -->
-    <!-- <link rel="shortcut icon" href="{{ asset('logoOficial.png') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('logoOficial.png') }}" type="image/x-icon"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
-    <!-- Icone na barra de navegação -->
-    <link rel="icon" type="image/png" href="/img/logoOficialOficial.png"/>
+    <title>Ticket Bravo</title>
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
+    <link rel="shortcut icon" href="../images/logo.svg">
 
-    <!-- Link Favicon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-180x180.png">
 
-    <!--Link das Imagens.css-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta name="kdt:page" content="home">
+    <meta property="og:title" content="Ticket Bravo">
+    <meta property="og:description" content="CULTURA E ENTRETENIMENTO ATRAVÉS DE UM CLICK">
+    <meta property="og:image" content="../images/KVFacebook.png">
+    <meta property="og:url" content="https://www.ticketbravo.com.br/">
+    <meta property="og:type" content="website">
+    <script src="../js/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
 
-    <!--Google-Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Poppins:wght@600&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="../js/vendors.bundle.js"></script>
 
-    <!-- Link do favcon -->
-    <link rel="shortcut icon" href="./LOGO/logo-favicon.png" type="image/x-icon">
-
-    <title>Bravo</title>
+    <link href="../css/vendors.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../css/override.css" rel="stylesheet" type="text/css">
+    <script data-ad-client="ca-pub-3376281802197214" async="" src="../js/adsbygoogle.js"></script>
+    <script id="kdtjs" type="text/javascript" async="" src="../js/k.js"></script>
 </head>
-    <body>
 
-        <!-- Barra de navegação -->
-        <header>            
-                <img  src="/img/logoOficialOficial.png" width="10%"class="logo">
-                        <!--Lista para classificar itens contidos dentro do menu-->
-            <!--Pode ser editavel-->
-            <ul class="navbar">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/todos">Nossos produtos</a></li>
-                <li>
-                <div class="dropdown">
-  <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Categorias
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-  @foreach(\App\Models\Categoria::all() as $categoria)
-    <li>
- <a class="dropdown-item" href="{{route('categoria.show', $categoria->CATEGORIA_ID)}}"> {{$categoria->CATEGORIA_NOME}}</a>
-    </li>
-    @endforeach
-  </ul>
-</div>
-
-                <!-- <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li> -->
-                <li><a href="/promocoes">Promoções</a></li>
-            </ul>
-            @if(!Auth::check())
-            <div class="main">
-
-                <!-- Arrumar botão transparente de pesquisa -->
-                <form action="../produto" class="d-flex" role="search" method="GET">
-                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
-                    <button class="btn btn-outline-danger" type="submit"><i class="ri-search-line"></i></button>
-                  </form>
-
-                <a href="../login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+<body class="m-page--wide m-header--fixed m-header--fixed-mobile m-footer--push m-aside--offcanvas-default "
+    style="zoom: 100%;">
 
 
-                <a href="../register" class="bxmenu">Criar conta</a>
-                <div class="bx bx-menu" id="menu-icon"></div>
+
+    <div class="m-grid m-grid--hor m-grid--root m-page">
+
+        <header id="m_header" class="m-grid__item  m-header" m-minimize="minimize" m-minimize-offset="200"
+            m-minimize-mobile-offset="200">
+
+            <div class="m-header__acessibility">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 m--hidden-mobile">
+
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="m-subheader__breadcrumbs m-nav m-nav--inline m--pull-right">
+                                <li class="m-nav__item">
+                                    <a href="javascript:zoomOut()" title="Diminuir zoom" class="m-nav__link"
+                                        accesskey="4">
+                                        <span class="m-nav__link-text">A-</span>
+                                    </a>
+                                </li>
+                                <li class="m-nav__item">
+                                    <a href="javascript:zoomIn()" title="Aumentar zoom" class="m-nav__link"
+                                        accesskey="5">
+                                        <span class="m-nav__link-text">A+</span>
+                                    </a>
+                                </li>
+                                <li class="m-nav__item">
+                                    <a href="javascript:toggleContrast()" title="Ativar/desativar alto contraste"
+                                        class="m-nav__link" accesskey="6">
+                                        <span class="m-nav__link-text">Contraste</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            @else
 
-            <div class="main">
+            <div id="header" class="m-header__top">
+                <div
+                    class="m-container m-container--responsive m-container--xxl m-container--full-height m-page__container">
+                    <div class="m-stack m-stack--ver m-stack--desktop">
+                        <div class="m-stack__item m-brand">
+                            <div class="m-stack m-stack--ver m-stack--general m-stack--inline">
+                                <div class="m-stack__item m-stack__item--middle m-brand__logo">
+                                    <a href="/" class="m-brand__logo-wrapper">
+                                        <img src="\img\logoOficial.png" width="150" alt="Bravo" tabindex="0">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+                            <div id="m_header_topbar" class="m-topbar m-stack m-stack--ver m-stack--general">
+                                <div class="m-stack__item m-topbar__nav-wrapper">
+                                    <ul class="m-topbar__nav m-nav m-nav--inline">
+                                        <li class="m-nav__item m--hidden-tablet-and-mobile">
+                                            <style>
+                                                .m-header--minimize-on .m-list-search__form {
+                                                    padding-top: 10px !important;
+                                                }
 
-                <!-- Arrumar botão transparente de pesquisa -->
-                <form action="../produto" class="d-flex" role="search" method="GET">
-                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
-                    <button class="btn btn-outline-danger" type="submit"><i class="ri-search-line"></i></button>
-                  </form>
+                                                @media (min-width: 1025px) {
+                                                    #s {
+                                                        width: 450px;
+                                                    }
+                                                }
 
-                  <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Olá, {{Auth::user()->USUARIO_NOME}}
-                </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                    <a class="dropdown-item"  href="/endereco">Meus Endereços</a>
-                        </li>
-                        <li>
-                    <a class="dropdown-item"  href="/pedido">Meus Pedidos</a>
-                        </li>
-                        <li>
-                    <a class="dropdown-item" href="{{route('usuarios.show', Auth::user()->USUARIO_ID)}}">Ver perfil</a>
-                     </li>
+                                                @media (max-width: 1024px) {
+                                                    #s {
+                                                        width: 335px;
+                                                    }
+                                                }
+                                            </style>
+
+                                            <!-- Search de pesquisa -->
+                                            <form id="frmPesquisar"
+                                                class="m-list-search__form m--padding-top-25-desktop m--margin-right-15-desktop"
+                                                method="GET" action="../produto">
+                                                <div class="m-typeahead">
+                                                    <div class="m-input-icon m-input-icon--right">
+                                                        <input type="text" id="search" name="search"
+                                                            class="form-control m-input m-input--pill"
+                                                            placeholder="Pesquise pelo evento..." autocomplete="off">
+                                                        <span class="m-input-icon__icon m-input-icon__icon--right">
+                                                            <span>
+                                                                <i class="flaticon-search"></i>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+
+                                        <!-- Notificação de carrinho -->
+                                        <li class="m-nav__item">
+                                            <a href="/carrinho" class="m-nav__link" tabindex="0">
+                                                <span class="m-nav__link-badge m-badge m-badge--success">0</span>
+                                                <span class="m-nav__link-icon">
+                                                    <span class="m-nav__link-icon-wrapper">
+                                                        <i class="flaticon-cart">
+                                                            <span class="m--hide">Meu Carrinho</span>
+                                                        </i>
+                                                        <small id="cartTime"
+                                                            class="m--font-danger m--hidden-tablet-and-mobile timer-icon"></small>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
 
 
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button class="buttonsair"onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
-                </form>
-                <div class="bx bx-menu" id="menu-icon"></div>
+                                        <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                            m-dropdown-toggle="click">
+
+                                            @if(!Auth::check())
+
+                                        <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                            m-dropdown-toggle="click">
+                                            <a href="#" class="m-nav__link m-dropdown__toggle" tabindex="0">
+                                                <span class="m-topbar__welcome m--hidden-mobile">Olá, &nbsp </span>
+                                                <span class="m-topbar__username m--hidden-mobile">Visitante!</span>
+                                                <span class="m-topbar__userpic">
+                                                    <span class="m-nav__link-icon">
+                                                        <span class="m-nav__link-icon-wrapper">
+                                                            <i class="flaticon-user"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+
+
+                                            <div class="m-dropdown__wrapper">
+                                                <span
+                                                    class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                <div class="m-dropdown__inner">
+                                                    <div class="m-dropdown__header m--align-center"
+                                                        style="background: url('../images/user_profile_bg.jpg'); background-size: cover;">
+                                                        <div class="m-card-user m-card-user--skin-dark">
+                                                            <div class="m-card-user__pic">
+                                                                <i class="flaticon-user m--icon-font-size-lg5"></i>
+                                                            </div>
+                                                            <div class="m-card-user__details">
+                                                                <span
+                                                                    class="m-card-user__name m--font-weight-500">Visitante</span>
+                                                                <span
+                                                                    class="m-card-user__email m--font-weight-300 m-link"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-dropdown__body">
+                                                        <div class="m-dropdown__content">
+                                                            <ul class="m-nav m-nav--skin-light">
+                                                                <li class="m-nav__item">
+                                                                    <a href="/login" class="m-nav__link" tabindex="0">
+                                                                        <i class="m-nav__link-icon flaticon-lock-1"></i>
+                                                                        <span class="m-nav__link-text">Login</span>
+                                                                    </a>
+                                                                </li>
+
+
+                                                                <li class="m-nav__item">
+                                                                    <a href="/register" class="m-nav__link"
+                                                                        tabindex="0">
+                                                                        <i class="m-nav__link-icon flaticon-notes"></i>
+                                                                        <span class="m-nav__link-text">Criar
+                                                                            conta</span>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        @else
+                                        <a href="#" class="m-nav__link m-dropdown__toggle" tabindex="0">
+                                            <span class="m-topbar__welcome m--hidden-mobile">Olá, &nbsp </span>
+                                            <span class="m-topbar__username m--hidden-mobile">{{ Auth::user()->USUARIO_NOME }}</span>
+                                            <span class="m-topbar__userpic">
+                                                <span class="m-nav__link-icon">
+                                                    <span class="m-nav__link-icon-wrapper">
+                                                        <i class="flaticon-user"></i>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <div class="m-dropdown__wrapper">
+                                            <span
+                                                class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                            <div class="m-dropdown__inner">
+                                                <div class="m-dropdown__header m--align-center"
+                                                    style="background: url('../images/user_profile_bg.jpg'); background-size: cover;">
+                                                    <div class="m-card-user m-card-user--skin-dark">
+                                                        <div class="m-card-user__pic">
+                                                            <i class="flaticon-user m--icon-font-size-lg5"></i>
+                                                        </div>
+                                                        <div class="m-card-user__details">
+                                                            <span class="m-card-user__name m--font-weight-500">{{ Auth::user()->USUARIO_NOME }}</span>
+                                                            <a href="{{ route('usuarios.show', Auth::user()->USUARIO_ID) }}"
+                                                                class="m-card-user__email m--font-weight-300 m-link">Ver perfil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <style>
+                                                    .m-nav__link:hover {
+                                                        text-decoration: none;
+                                                    }
+                                                </style>
+                                                <div class="m-dropdown__body">
+                                                    <div class="m-dropdown__content">
+                                                        <ul class="m-nav m-nav--skin-light">
+                                                            <li class="m-nav__item">
+                                                                <a href="/endereco" class="m-nav__link" tabindex="0">
+                                                                    <i class="m-nav__link-icon flaticon-map"></i>
+                                                                    <span class="m-nav__link-text">Meus Endereços</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="m-nav__item">
+                                                                <a href="/pedido" class="m-nav__link" tabindex="0">
+                                                                    <i class="m-nav__link-icon flaticon-notes"></i>
+                                                                    <span class="m-nav__link-text">Meus Pedidos</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="m-nav__item" style="margin-left: -15px;">
+                                                                <form method="POST" action="{{ route('logout') }}"
+                                                                    class="m-nav__link">
+                                                                    @csrf
+                                                                    <button class="btn" type="submit">
+                                                                        <i class="m-nav__link-icon flaticon-logout"></i>
+                                                                        <span class="m-nav__link-text">&nbsp Sair</span>
+                                                                    </button>
+                                                                </form>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endif
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-</ul>
-
-            @endif
         </header>
+
+        <p>&nbsp</p>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
 
         <main>@yield('main')</main>
 
-            <!--Footer-->
-            <footer>
+        <script>
+                  r zoom = 100;
+            var contrast = false;
+            wind                istener("load", function (event)                       
+            zoom = parseInt(window.localStorage.getItem('zoom'|              
+            document.body.style.zoom = z                                
+            con                
+            ow.localStor                    
+            trast') == 'true' ? true : false;
+                     f (contrast == t                                    
+                     ontrast = false;
+                    t                    
+                }
+                                 
+                function zoomOut() {
+                           m > 100) {
+                        zoom = zoom - 10;
+                    window.localStorage.set                 
+                    zoom);
+                    docum            
+                    .style.zoom = zoom + '%';
+                }
+            }
 
-        <div class="wrapper">
-            <div class="footer-box">
-             <div class="company-footer">
+        function zoomIn() {
+                if (zoom < 150) {
+                    zoom = zoom + 10;
+                    window.localStorage.setItem('zoom', zoom);
+                    document.body.style.zoom = zoom + '%';
+                }
+            }
 
-                <img class="logo-yyt-log" src="/img/logoOficialOficial.png">
-                <p>A LOJA QUE TODO OTAKU AMA!</p>
+            function toggleContrast(    contrast = !contrast;
+                window.localStorage.setItem('contrast', contrast);
+                $(document.body).toggleClass('contrast');
+            }
+        </script>
+                    <script>
+    document.getElementById("categoriaSelect").addEventListener("change", function() {
+        var categoriaSelecionad                        ue;
+
+        // Ocult                            tos
+        var pr                                erySelectorAll(".p                                odutos.forEach(function(produto) {
+                                        splay = "none";
+        });
+
+        //                            s                         cat                        ionada
+        if (c                            ada !== "") {
+                                    Filtrados = docume                                ".produto[data-categoria='" + categoriaSele                                         produtosFiltrados.forEach(func                            ra                                                   toFiltrado.style.display = "                                });
+        } else                            / Se nenhuma categoria selecionada, mostra todos os                                  produtos.forEach(function(produto) {                          to.style.display = "block";
+            });
+        }
+    });
+                    </script>
+
+                    <div class="row">
+                    </div>
+
+                    <div class="m-separator m-separator--dashed m--padding-top-20"></div>
+
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-auto">
+                            <div class="m-section">
+                                <p class="m-section__heading">Redes Sociais</p>
+                                <div class="m-section__content">
+                                    <ul class="m-nav m-nav--inline m-icons">
+                                        <li class="m-nav__item">
+                                            <a href="https://www.facebook.com/Ticket Bravo" class="m-nav__link"
+                                                title="Facebook" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-facebook">
+                                                    <span class="m--hide">Facebook</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://instagram.com/Ticket Bravo" class="m-nav__link"
+                                                title="Instagram" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-instagram">
+                                                    <span class="m--hide">Instagram</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://twitter.com/Ticket Bravo" class="m-nav__link"
+                                                title="Twitter" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-twitter">
+                                                    <span class="m--hide">Twitter</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://www.youtube.com/Ticket Bravo" class="m-nav__link"
+                                                title="Youtube" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-youtube">
+                                                    <span class="m--hide">Youtube</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://www.linkedin.com/company/Ticket Bravo-" class="m-nav__link"
+                                                title="Linkedin" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-linkedin">
+                                                    <span class="m--hide">Linkedin</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://open.spotify.com/user/Ticket Bravo" class="m-nav__link"
+                                                title="Spotify" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-spotify">
+                                                    <span class="m--hide">Spotify</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://t.me/s/Ticket BravoIngressos" class="m-nav__link"
+                                                title="Telegram" target="_blank" tabindex="0">
+                                                <i class="m-nav__link-icon socicon-telegram">
+                                                    <span class="m--hide">Telegram</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto m--margin-left-50-desktop">
+                            <div class="m-section">
+                                <p class="m-section__heading">Aplicativo</p>
+                                <div class="m-section__content">
+                                    <ul class="m-nav m-nav--inline m-icons">
+                                        <li class="m-nav__item">
+                                            <a href="https://itunes.apple.com/us/app/Ticket Bravo/id924966976?l=pt&amp;ls=1&amp;mt=8"
+                                                class="m-nav__link" target="_blank">
+                                                <i class="m-nav__link-icon socicon-apple">
+                                                    <span class="m--hide">Apple Store</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="https://play.google.com/store/apps/details?id=air.com.Ticket Bravo.Ticket Bravo&amp;hl=pt_BR"
+                                                class="m-nav__link" target="_blank">
+                                                <i class="m-nav__link-icon socicon-android">
+                                                    <span class="m--hide">Play Store</span>
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12 m--align-center">
+                            <div class="alert m-alert m-alert--default" role="alert">
+                                <small>
+                                    Todos os preços e condições comerciais estão sujeitos a alteração comercial sem
+                                    prévio aviso.<br>
+                                    <strong>Ticket Bravo Tecnologia e Soluções LTDA - CNPJ
+                                        10.000.000/0001-01</strong><br>
+                                    Avenida Guarapiranga, 2616 - CEP: 04902-005 - São Paulo - SP
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                                    $(".owl-carousel").owlCarousel({
+                        items: 1,
+                                         animateIn: "fadeIn(300)",
+                                        loop: true,
+                                        autoplay: true,
+                        autop                        ut: 5000,
+                         aut                            use: true,
+                                              fals                                           nav: true,
+                                                 ['<i class="fa fa-arrow-alt-circle                            e="font-size: 40px;"></i>'],
+                    });
+                </script>
+
+                <!-- Google Analytics -->
 
             </div>
         </div>
 
-        <div class="footer-box">
-            <div class="articles-footer">
-
-                <h3>Formas de pagamento</h3>
-                <div class="footer-list footer-article-list">
-                    <div>                        
-                        <img class="cardreey-boleto" src="/img/boleto.jpg">
+        <footer id="footer" class="m-grid__item m-footer d-flex justify-content-center">
+            <div
+                class="m-container m-container--responsive m-container--xxl m-container--full-height m-page__container">
+                <div class="m-footer__wrapper">
+                    <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+                        <div class="m-stack__item m-stack__item--last text-center">
+                            <span class="m-footer__copyright">
+                                Ticket Bravo © Todos os direitos reservados.
+                            </span>
+                        </div>
                     </div>
-                    <div>
-                        <img class="cardreey" src="/img/cardvisa.png">                        
-                    </div>
-                        <div>
-                            <img class="cardreey-pix" src="/img/cardpix.png">
-                    </div>
-                   
                 </div>
             </div>
-        </div>
+        </footer>
 
-            <div class="footer-box">
-                <div class="footer-social">
-                    <h3>Redes Sociais</h3>
-                    <ul class="footer-list">
-                        <li>
-                            <a class="icon-face" href="#">
-                                <!-- Icon facebook -->
-                                <i class="ri-facebook-box-fill"></i>
-                                <span>Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-insta" href="#">
-                                <!-- Icon Instagram -->
-                                <i class="ri-instagram-line"></i>
-                                <span>Instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-you" href="#">
-                                <!-- Icon youtube -->
-                                <i class="ri-youtube-fill"></i>
-                                <span>Youtube</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="footer-bottom">
-        <div class="wrapper">
-            <p>@Bravo - 2023</p>
-        </div>
-    </div>
-    </footer>
-<!-- FIM FOOTER -->
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </body>
+    <script src="../js/scripts.bundle.js"></script>
+    <script src="../js/messages_ptbr.js"></script>
+
+    <script>
+        var e;
+
+        var BootstrapSelect = { 
+            init: function () {
+                $(".m_selectpicker").selectpicker();
+            }
+        };
+
+        jQuery(document).ready(function () {
+            BootstrapSelect.init();
+        });
+    </script>
+
+    <!-- BEGIN KONDUTO CODE -->
+    <script type="text/javascript">
+        var __kdt = __kdt || [];
+        __kdt.push({
+            "public_key": "P33F4D91EB2"
+        });
+        {
+            var kdt = ateElement('script');
+            kdt.kdt.typet               'https://i.k-analytix.co              getElement                       ren
+        })             rID;
+                       var period =            ry = 0;
+            var            l(function () {
+                      ((typeof (Kon            &
+                     uto.getVisitorID) !== "undefined")) {
+                    visitorID = window.Konduto            ar = true;
+                      if (clear) {
+                    clearInterval(intervalID);
+                }
+            }, period);
+        })(visitorID);
+
+    </script>
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM                  "beaco            .nr-d            , Ke"NRl                          28151", "tr            nNa                          VBBZXApK                RFZL            XFdS             "                0, "app                    9, "a                gNPGE8=", "errorBeaco                        .net", "agent": "" }</script>
+
+</body>
+
 </html>
