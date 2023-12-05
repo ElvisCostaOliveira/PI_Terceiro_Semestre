@@ -1,8 +1,5 @@
-
 @extends('layout.app')
 @section('main')
-
-
 
 <section class="h-100 h-custom" style="background-color: #ffffff">
       <div class="container py-5 h-100">

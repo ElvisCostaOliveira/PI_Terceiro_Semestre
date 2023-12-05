@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('main')
+
 <script>
         function login() {
             window.alert('Você precisa de uma conta para acessar o carrinho!');
