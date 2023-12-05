@@ -181,8 +181,6 @@
                                                 </span>
                                             </a>
 
-
-
                                             <div class="m-dropdown__wrapper">
                                                 <span
                                                     class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
@@ -220,7 +218,6 @@
                                                                             conta</span>
                                                                     </a>
                                                                 </li>
-
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -231,7 +228,8 @@
                                         @else
                                         <a href="#" class="m-nav__link m-dropdown__toggle" tabindex="0">
                                             <span class="m-topbar__welcome m--hidden-mobile">Olá, &nbsp </span>
-                                            <span class="m-topbar__username m--hidden-mobile">{{ Auth::user()->USUARIO_NOME }}</span>
+                                            <span class="m-topbar__username m--hidden-mobile">{{
+                                                Auth::user()->USUARIO_NOME }}</span>
                                             <span class="m-topbar__userpic">
                                                 <span class="m-nav__link-icon">
                                                     <span class="m-nav__link-icon-wrapper">
@@ -251,9 +249,11 @@
                                                             <i class="flaticon-user m--icon-font-size-lg5"></i>
                                                         </div>
                                                         <div class="m-card-user__details">
-                                                            <span class="m-card-user__name m--font-weight-500">{{ Auth::user()->USUARIO_NOME }}</span>
+                                                            <span class="m-card-user__name m--font-weight-500">{{
+                                                                Auth::user()->USUARIO_NOME }}</span>
                                                             <a href="{{ route('usuarios.show', Auth::user()->USUARIO_ID) }}"
-                                                                class="m-card-user__email m--font-weight-300 m-link">Ver perfil</a>
+                                                                class="m-card-user__email m--font-weight-300 m-link">Ver
+                                                                perfil</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -355,11 +355,6 @@
                                         </div>
                                     </li>
                                     @endforeach
-
-
-
-
-
                                 </ul>
                             </div>
                         </div>
@@ -369,42 +364,39 @@
         </header>
 
         <script>
-                  r zoom = 100;
+            var zoom = 100;
             var contrast = false;
-            wind                istener("load", function (event)                       
-            zoom = parseInt(window.localStorage.getItem('zoom'|              
-            document.body.style.zoom = z                                
-            con                
-            ow.localStor                    
-            trast') == 'true' ? true : false;
-                     f (contrast == t                                    
-                     ontrast = false;
-                    t                    
+            window.addEventListener("load", function (event) {
+                zoom = parseInt(window.localStorage.getItem('zoom')) || 100;
+                document.body.style.zoom = zoom + '%';
+                contrast = window.localStorage.getItem('contrast') == 'true' ? true : false;
+                if (contrast == true) {
+                    contrast = false;
+                    toggleContrast();
                 }
-                                 
-                function zoomOut() {
-                           m > 100) {
-                        zoom = zoom - 10;
-                    window.localStorage.set                 
-                    zoom);
-                    docum            
-                    .style.zoom = zoom + '%';
+            });
+            function zoomOut() {
+                if (zoom > 100) {
+                    zoom = zoom - 10;
+                    window.localStorage.setItem('zoom', zoom);
+                    document.body.style.zoom = zoom + '%';
                 }
             }
-
-        function zoomIn() {
+            function zoomIn() {
                 if (zoom < 150) {
                     zoom = zoom + 10;
                     window.localStorage.setItem('zoom', zoom);
                     document.body.style.zoom = zoom + '%';
                 }
             }
-
-            function toggleContrast(    contrast = !contrast;
+            function toggleContrast() {
+                contrast = !contrast;
                 window.localStorage.setItem('contrast', contrast);
                 $(document.body).toggleClass('contrast');
             }
         </script>
+
+
         <div
             class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-container m-container--responsive m-container--xxl m-page__container m-body">
             <div id="contents" class="m-grid__item m-grid__item--fluid m-wrapper">
@@ -588,21 +580,26 @@
 
                     </div>
                     <script>
-    document.getElementById("categoriaSelect").addEventListener("change", function() {
-        var categoriaSelecionad                        ue;
-
-        // Ocult                            tos
-        var pr                                erySelectorAll(".p                                odutos.forEach(function(produto) {
-                                        splay = "none";
-        });
-
-        //                            s                         cat                        ionada
-        if (c                            ada !== "") {
-                                    Filtrados = docume                                ".produto[data-categoria='" + categoriaSele                                         produtosFiltrados.forEach(func                            ra                                                   toFiltrado.style.display = "                                });
-        } else                            / Se nenhuma categoria selecionada, mostra todos os                                  produtos.forEach(function(produto) {                          to.style.display = "block";
-            });
-        }
-    });
+                        document.getElementById("categoriaSelect").addEventListener("change", function() {
+                            var categoriaSelecionada = this.value;
+                            // Oculta todos os produtos
+                            var produtos = document.querySelectorAll(".produto");
+                            produtos.forEach(function(produto) {
+                                produto.style.display = "none";
+                            });
+                            // Mostra apenas os produtos da categoria selecionada
+                            if (categoriaSelecionada !== "") {
+                                var produtosFiltrados = document.querySelectorAll(".produto[data-categoria='" + categoriaSelecionada + "']");
+                                produtosFiltrados.forEach(function(produtoFiltrado) {
+                                    produtoFiltrado.style.display = "block";
+                                });
+                            } else {
+                                // Se nenhuma categoria selecionada, mostra todos os produtos
+                                produtos.forEach(function(produto) {
+                                    produto.style.display = "block";
+                                });
+                            }
+                        });
                     </script>
 
                     <div class="row">
@@ -720,19 +717,19 @@
                 </div>
 
                 <script>
-                                    $(".owl-carousel").owlCarousel({
+                    $(".owl-carousel").owlCarousel({
                         items: 1,
-                                         animateIn: "fadeIn(300)",
-                                        loop: true,
-                                        autoplay: true,
-                        autop                        ut: 5000,
-                         aut                            use: true,
-                                              fals                                           nav: true,
-                                                 ['<i class="fa fa-arrow-alt-circle                            e="font-size: 40px;"></i>'],
+                        animateIn: "fadeIn(300)",
+                        loop: true,
+                        autoplay: true,
+                        autoplayTimeout: 5000,
+                        autoplayHoverPause: true,
+                        dots: false,
+                        nav: true,
+                        navText: ['<i class="fa fa-arrow-alt-circle-left" style="font-size: 40px;"></i>', 
+                        '<i class="fa fa-arrow-alt-circle-right" style="font-size: 40px;"></i>'],
                     });
                 </script>
-
-                <!-- Google Analytics -->
 
             </div>
         </div>
@@ -760,7 +757,7 @@
     <script>
         var e;
 
-        var BootstrapSelect = { 
+        var BootstrapSelect = {
             init: function () {
                 $(".m_selectpicker").selectpicker();
             }
@@ -780,13 +777,13 @@
         {
             var kdt = ateElement('script');
             kdt.kdt.typet               'https://i.k-analytix.co              getElement                       ren
-        })             rID;
-                       var period =            ry = 0;
-            var            l(function () {
-                      ((typeof (Kon            &
-                     uto.getVisitorID) !== "undefined")) {
-                    visitorID = window.Konduto            ar = true;
-                      if (clear) {
+        }) rID;
+        var period = ry = 0;
+        var l(function () {
+            ((typeof (Kon &
+                uto.getVisitorID) !== "undefined")) {
+                visitorID = window.Konduto            ar = true;
+                if (clear) {
                     clearInterval(intervalID);
                 }
             }, period);
