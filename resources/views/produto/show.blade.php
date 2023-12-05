@@ -1,5 +1,4 @@
-
-@extends('layout.prod')
+@extends('layout.app')
 @section('main')
 <script>
         function login() {

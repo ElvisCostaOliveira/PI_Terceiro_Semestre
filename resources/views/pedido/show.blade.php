@@ -1,7 +1,5 @@
 
-
-
-@extends('layout.carrinho')
+@extends('layout.app')
 @section('main')
 
 

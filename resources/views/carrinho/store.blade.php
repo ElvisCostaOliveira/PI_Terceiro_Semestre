@@ -1,4 +1,4 @@
-@extends('layout.carrinho')
+@extends('layout.app')
 @section('main')
 
 
@@ -40,7 +40,7 @@
                           </button>
 
                           <input id="form1" min="1" name="quantity" value="{{$item -> ITEM_QTD}}"  type="number"
-                            class="form-control form-control-sm" disabled/>
+                            class="form-control form-control-sm"/>
 
                           <button class="btn btn-link px-2"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">

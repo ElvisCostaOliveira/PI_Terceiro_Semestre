@@ -560,7 +560,7 @@
                                                                                 action="{{route('produto.show', $produto->PRODUTO_ID)}}">
                                                                                 @csrf
                                                                                 <button type="submit"
-                                                                                    class="btn btn-warning btn-block buttonLogin fixed-width-button">Comprar</button>
+                                                                                    class="btn btn-warning btn-block buttonLogin fixed-width-button">Detalhes</button>
                                                                             </form>
                                                                         </div>
                                                                     </div>
