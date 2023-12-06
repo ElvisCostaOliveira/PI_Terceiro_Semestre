@@ -306,10 +306,7 @@
         <p>&nbsp</p>
         <p>&nbsp</p>
         <p>&nbsp</p>
-        <p>&nbsp</p>
-        <p>&nbsp</p>
-        <p>&nbsp</p>
-        <p>&nbsp</p>
+        
 
         <main>@yield('main')</main>
 
