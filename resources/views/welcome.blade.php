@@ -316,32 +316,25 @@
                                 <i class="la la-close"></i>
                             </button>
 
-                            <div id="m_header_menu"
-                                class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas m-header-menu--skin-dark m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light">
+                            <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas m-header-menu--skin-dark m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light">
                                 <ul class="m-menu__nav m-menu__nav--submenu-arrow">
 
                                     @foreach(\App\Models\Categoria::all() as $categoria)
-                                    <li class="m-menu__item m-menu__item--submenu m-menu__item--rel"
-                                        m-menu-submenu-toggle="click" aria-haspopup="true">
-                                        <a href="{{ route('categoria.show', $categoria->CATEGORIA_ID) }}"
-                                            class="m-menu__link m-menu__toggle">
+                                    <li class="m-menu__item m-menu__item--submenu m-menu__item--rel categoria-item" m-menu-submenu-toggle="click" aria-haspopup="true">
+                                        <a href="{{ route('categoria.show', $categoria->CATEGORIA_ID) }}" class="m-menu__link m-menu__toggle">
                                             <span class="m-menu__item-here"></span>
                                             <span class="m-menu__link-text">{{ $categoria->CATEGORIA_NOME }}</span>
                                             <i class="m-menu__hor-arrow la la-angle-down"></i>
                                             <i class="m-menu__ver-arrow la la-angle-right"></i>
                                         </a>
                                         <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
-                                            <span class="m-menu__arrow m-menu__arrow--adjust"
-                                                style="z-index: 1;"></span>
-                                            <ul class="m-menu__subnav m-scrollable" data-scrollbar-shown="true"
-                                                data-scrollable="true" style="max-height:500px; overflow-y: visible;">
+                                            <span class="m-menu__arrow m-menu__arrow--adjust" style="z-index: 1;"></span>
+                                            <ul class="m-menu__subnav m-scrollable" data-scrollbar-shown="true" data-scrollable="true" style="max-height:500px; overflow-y: visible;">
                                                 <li class="m-menu__item" aria-haspopup="true">
-                                                    <a href="{{ route('categoria.show', $categoria->CATEGORIA_ID) }}"
-                                                        class="m-menu__link" title="{{ $categoria->CATEGORIA_NOME }}">
+                                                    <a href="{{ route('categoria.show', $categoria->CATEGORIA_ID) }}" class="m-menu__link" title="{{ $categoria->CATEGORIA_NOME }}">
                                                         <span class="m-menu__link-title">
                                                             <span class="m-menu__link-wrap">
-                                                                <span class="m-menu__link-text">{{
-                                                                    $categoria->CATEGORIA_NOME }}</span>
+                                                                <span class="m-menu__link-text">{{ $categoria->CATEGORIA_NOME }}</span>
                                                                 <span class="m-menu__link-badge notranslate">
                                                                     <span class="m-badge m-badge--default">
                                                                         {{ $categoria->Produtos->count() }}
@@ -355,9 +348,37 @@
                                         </div>
                                     </li>
                                     @endforeach
+
                                 </ul>
                             </div>
+                            <a href="#" id="btnProximo">Próximo</a>
                         </div>
+                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Inicialmente, mostre as primeiras 11 categorias
+                var todasAsCategorias = $('.m-menu__item');
+                var itensPorPagina = 11;
+                var ultimaCategoriaExibida = 0;
+
+                // Exibe as primeiras 11 categorias
+                todasAsCategorias.slice(0, itensPorPagina).show();
+
+                // Manipula o clique no botão Próximo
+                $('#btnProximo').on('click', function() {
+                    // Esconde as categorias atuais
+                    todasAsCategorias.hide();
+
+                    // Calcula as próximas 11 categorias a serem exibidas
+                    ultimaCategoriaExibida += itensPorPagina;
+                    var proximasCategorias = todasAsCategorias.slice(ultimaCategoriaExibida, ultimaCategoriaExibida + itensPorPagina);
+
+                    // Exibe as próximas 11 categorias ou menos se não houver mais categorias
+                    proximasCategorias.show();
+                });
+            });
+        </script>
+
                     </div>
                 </div>
             </div>
