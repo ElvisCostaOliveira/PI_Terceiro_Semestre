@@ -59,8 +59,10 @@
                     <div class="col-lg-12">
                         <h4 class="media-heading notranslate">{{$produto->PRODUTO_NOME}}</h4>
                         <p>
-                             &nbsp;
-                            Quantidade disponivel:{{$produto->PRODUTO_QTD}} </p>
+                            &nbsp;
+                            Quantidade disponível: {{ $produto->ProdutoEstoque ? $produto->ProdutoEstoque->PRODUTO_QTD : 'Esgotado!' }}
+                        </p>
+
                     </div>
                 </div>
 
@@ -111,30 +113,38 @@
         </div>
 
         @if(!Auth::check())
+    @if($produto->ProdutoEstoque && $produto->ProdutoEstoque->PRODUTO_QTD > 0)
+        <div style="text-align: center; display: block; margin: 0 auto;">
+            <label for="">&nbsp Adicionar quantidade</label>
+            <input type="number" name="ITEM_QTD" min="1" value="1">
+        </div>
 
-                <div style="text-align: center; display: block; margin: 0 auto;">
-                    <label for="">&nbsp Adicionar quantidade</label>
-                    <input type="number" name="ITEM_QTD" min="1" value="1">
-                </div>
+        <a href="/login">
+            <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="login()">Adicionar ao carrinho</button>
+        </a>
+    @else
+            <strong style="text-align: center; display: block; margin: 0 auto;">Infelizmente você chegou atrasado, o produto está esgotado</strong>
+                        <p></p>
+    @endif
+@else
+    @if($produto->ProdutoEstoque && $produto->ProdutoEstoque->PRODUTO_QTD > 0)
+        <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
+            @csrf
 
-                    <a href="/login">
-                        <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="login()">Adicionar ao carrinho</button>
-                    </a>
+            <div style="text-align: center; display: block; margin: 0 auto;">
+                <label for="">Adicionar quantidade</label>
+                <input type="number" name="ITEM_QTD" min="1" value="1">
+
+                <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="aviso()">Adicionar ao carrinho</button>
+            </div>
+        </form>
+    @else
+        <strong style="text-align: center; display: block; margin: 0 auto;">Infelizmente você chegou atrasado, o produto está esgotado</strong>
+                <p></p>
+        @endif
+@endif
 
 
-                @else
-                <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
-                @csrf
-
-                <div style="text-align: center; display: block; margin: 0 auto;">
-                    <label for="">Adicionar quantidade</label>
-                    <input type="number" name="ITEM_QTD" min="1" value="1">
-
-                    <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="aviso()">Adicionar ao carrinho</button>
-                </div>
-
-                </form>
-                @endif
 
                 
 
