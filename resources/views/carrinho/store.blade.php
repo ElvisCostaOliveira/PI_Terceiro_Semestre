@@ -13,6 +13,22 @@
         width: 50px; 
     }
 </style>
+<script>
+    function removeItem(formId) {
+        // Implemente a lógica para remover o item do carrinho usando o ID do formulário
+        alert('Implemente a lógica para remover o item do carrinho com o ID ' + formId);
+    }
+
+    function decrementQuantity(formId) {
+        document.getElementById(formId).stepDown();
+    }
+
+    function incrementQuantity(formId) {
+        document.getElementById(formId).stepUp();
+    }
+</script>
+
+
 
 <section class="h-100 h-custom" >
     <div class="container py-5 h-100">
@@ -30,9 +46,10 @@
                                     <hr class="my-4">
 
                                     @foreach($carrinho as $item)
-                                        @csrf
-                                        @if($item->ITEM_QTD > 0)
-                                            <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                                @csrf
+                                                @if($item->ITEM_QTD > 0)
+                                                    <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                                    
                                                 <div class="col-md-2 col-lg-2 col-xl-2 img-carrinho" >
                                                     <img src="{{$item->Produto->ProdutoImagem[0]->IMAGEM_URL}}"
                                                         class="img-fluid rounded-3" alt="Cotton T-shirt">
@@ -41,14 +58,11 @@
                                                     <h6 class="text-muted">{{$item->Produto->PRODUTO_NOME}}</h6>
                                                 </div>
                                                 <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                    <button class="btn btn-link px-2"
-                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                    <button class="btn btn-link px-2" onclick="decrementQuantity('form{{$item->id}}')">
                                                         <i class="fas fa-minus"></i>
                                                     </button>
-                                                    <input id="form1" min="1" name="quantity" value="{{$item->ITEM_QTD}}"
-                                                        type="number" class="form-control form-control-sm" />
-                                                    <button class="btn btn-link px-2"
-                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                    <input id="form{{$item->id}}" min="1" name="quantity" value="{{$item->ITEM_QTD}}" type="number" class="form-control form-control-sm" />
+                                                    <button class="btn btn-link px-2" onclick="incrementQuantity('form{{$item->id}}')">
                                                         <i class="fas fa-plus"></i>
                                                     </button>
                                                 </div>
@@ -60,8 +74,11 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                    <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                                </div>
+    <a href="#!" class="text-muted" onclick="removeItem('form{{$item->id}}')">
+        <i class="fas fa-times"></i>
+    </a>
+</div>
+
                                             </div>
                                             <hr class="my-4">
                                         @endif

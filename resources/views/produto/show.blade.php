@@ -50,8 +50,12 @@
 
     <div class="m-portlet m-portlet--mobile m-portlet--responsive-mobile">
     <div class="m-portlet__head--fit">
-                <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" alt="{{$produto->PRODUTO_NOME}}" width="100%" style="max-height: 200px;" class="img-fluid">
-    </div>
+    @if(isset($produto->ProdutoImagem[0]->IMAGEM_URL))
+        <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" alt="{{$produto->PRODUTO_NOME}}" width="100%" style="max-height: 200px;" class="img-fluid">
+    @else
+        <img src="../img/indisponivel.jpg" alt="Indisponível" width="100%" style="max-height: 200px;" class="img-fluid">
+    @endif
+</div>
     <div class="m-portlet__body m--padding-bottom-5">
         <div class="m-section m--margin-bottom-5">
             <div class="m-section__content">
@@ -123,8 +127,8 @@
             <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="login()">Adicionar ao carrinho</button>
         </a>
     @else
-            <strong style="text-align: center; display: block; margin: 0 auto;">Infelizmente você chegou atrasado, o produto está esgotado</strong>
-                        <p></p>
+    <strong style="text-align: center; display: block; margin: 0 auto;">Infelizmente você chegou atrasado, o produto está esgotado</strong>
+                <p></p>
     @endif
 @else
     @if($produto->ProdutoEstoque && $produto->ProdutoEstoque->PRODUTO_QTD > 0)
