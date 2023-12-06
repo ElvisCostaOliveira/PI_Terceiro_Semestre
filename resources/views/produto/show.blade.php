@@ -118,7 +118,7 @@
                 </div>
 
                     <a href="/login">
-                        <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button"" onclick="login()">Adicionar ao carrinho</button>
+                        <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="login()">Adicionar ao carrinho</button>
                     </a>
 
 
@@ -130,7 +130,7 @@
                     <label for="">Adicionar quantidade</label>
                     <input type="number" name="ITEM_QTD" min="1" value="1">
 
-                    <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button"" onclick="aviso()">Adicionar ao carrinho</button>
+                    <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button" onclick="aviso()">Adicionar ao carrinho</button>
                 </div>
 
                 </form>
