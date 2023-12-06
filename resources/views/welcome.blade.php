@@ -355,29 +355,35 @@
                         </div>
                         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script>
-            $(document).ready(function() {
-                // Inicialmente, mostre as primeiras 11 categorias
-                var todasAsCategorias = $('.m-menu__item');
-                var itensPorPagina = 11;
-                var ultimaCategoriaExibida = 0;
+    $(document).ready(function() {
+        // Inicialmente, mostre as primeiras 11 categorias
+        var todasAsCategorias = $('.m-menu__item');
+        var itensPorPagina = 11;
+        var ultimaCategoriaExibida = 0;
 
-                // Exibe as primeiras 11 categorias
-                todasAsCategorias.slice(0, itensPorPagina).show();
+        // Exibe as primeiras 11 categorias
+        todasAsCategorias.slice(0, itensPorPagina).show();
 
-                // Manipula o clique no botão Próximo
-                $('#btnProximo').on('click', function() {
-                    // Esconde as categorias atuais
-                    todasAsCategorias.hide();
+        // Manipula o clique no botão Próximo
+        $('#btnProximo').on('click', function() {
+            // Esconde as categorias atuais
+            todasAsCategorias.hide();
 
-                    // Calcula as próximas 11 categorias a serem exibidas
-                    ultimaCategoriaExibida += itensPorPagina;
-                    var proximasCategorias = todasAsCategorias.slice(ultimaCategoriaExibida, ultimaCategoriaExibida + itensPorPagina);
+            // Calcula as próximas 11 categorias a serem exibidas
+            ultimaCategoriaExibida += itensPorPagina;
+            var proximasCategorias = todasAsCategorias.slice(ultimaCategoriaExibida, ultimaCategoriaExibida + itensPorPagina);
 
-                    // Exibe as próximas 11 categorias ou menos se não houver mais categorias
-                    proximasCategorias.show();
-                });
-            });
-        </script>
+            // Se não houver mais categorias, volta ao início
+            if (proximasCategorias.length === 0) {
+                ultimaCategoriaExibida = 0;
+                proximasCategorias = todasAsCategorias.slice(0, itensPorPagina);
+            }
+
+            // Exibe as próximas 11 categorias ou menos se não houver mais categorias
+            proximasCategorias.show();
+        });
+    });
+</script>
 
                     </div>
                 </div>
