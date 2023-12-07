@@ -125,59 +125,11 @@
 
                     <img class="logo-yyt-log" src="/img/logoOficialOficial.png">
                     <h3>Bravo</h3>
-                    <p>A loja que todo Otaku Br Ama!</p>
 
                 </div>
             </div>
 
-            <div class="footer-box">
-                <div class="articles-footer">
 
-                    <h3>Formas de pagamento</h3>
-                    <ul class="footer-list footer-article-list">
-                        <li>
-                            <!-- <span class="article-date">PIX</span> -->
-                            <img class="cardreey" src="/img/cardpix.png">
-                        </li>
-                        <li>
-                            <!-- <span class="article-date">PIX</span> -->
-                            <img class="cardreey" src="/img/cardvisa.png">
-                        </li>
-                        <li>
-                            <!-- <span class="article-date">PIX</span> -->
-                            <img class="cardreey" src="/img/boleto.jpg">
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-                <div class="footer-box">
-                    <h3>Redes Sociais</h3>
-                    <ul class="footer-list">
-                        <li>
-                            <a href="#">
-                                <!-- Icon facebook -->
-                                <i class="ri-facebook-box-fill"></i>
-                                <span>Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <!-- Icon Instagram -->
-                                <i class="ri-instagram-line"></i>
-                                <span>Instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <!-- Icon youtube -->
-                                <i class="ri-youtube-fill"></i>
-                                <span>Youtube</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
             </div>
             <div class="footer-bottom">

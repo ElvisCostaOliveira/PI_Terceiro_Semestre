@@ -342,21 +342,26 @@
             }
         </script>
                     <script>
-    document.getElementById("categoriaSelect").addEventListener("change", function() {
-        var categoriaSelecionad                        ue;
-
-        // Ocult                            tos
-        var pr                                erySelectorAll(".p                                odutos.forEach(function(produto) {
-                                        splay = "none";
-        });
-
-        //                            s                         cat                        ionada
-        if (c                            ada !== "") {
-                                    Filtrados = docume                                ".produto[data-categoria='" + categoriaSele                                         produtosFiltrados.forEach(func                            ra                                                   toFiltrado.style.display = "                                });
-        } else                            / Se nenhuma categoria selecionada, mostra todos os                                  produtos.forEach(function(produto) {                          to.style.display = "block";
-            });
-        }
-    });
+                        document.getElementById("categoriaSelect").addEventListener("change", function() {
+                            var categoriaSelecionada = this.value;
+                            // Oculta todos os produtos
+                            var produtos = document.querySelectorAll(".produto");
+                            produtos.forEach(function(produto) {
+                                produto.style.display = "none";
+                            });
+                            // Mostra apenas os produtos da categoria selecionada
+                            if (categoriaSelecionada !== "") {
+                                var produtosFiltrados = document.querySelectorAll(".produto[data-categoria='" + categoriaSelecionada + "']");
+                                produtosFiltrados.forEach(function(produtoFiltrado) {
+                                    produtoFiltrado.style.display = "block";
+                                });
+                            } else {
+                                // Se nenhuma categoria selecionada, mostra todos os produtos
+                                produtos.forEach(function(produto) {
+                                    produto.style.display = "block";
+                                });
+                            }
+                        });
                     </script>
 
                     <div class="row">

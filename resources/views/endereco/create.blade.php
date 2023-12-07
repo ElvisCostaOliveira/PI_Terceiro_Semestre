@@ -1,93 +1,152 @@
 @extends('layout.app')
 @section('main')
 
-    <script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-     function semLetra(a){
-       var x= a.which || e.keycode;
-       if ((x>=48 && x<=57) || (x==44))
-       {
-         return true;
-       }else{
-         return false;
-       }
-     }
-     </script>
+<script>
+    // Garante que o código JavaScript seja executado após o carregamento do DOM
+    $(document).ready(function () {
+        function semLetra(a) {
+            var x = a.which || e.keycode;
+            if ((x >= 48 && x <= 57) || (x == 44)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
-    <div class="principal-yt">
+        function buscarCep() {
+            var cep = $('#ENDERECO_CEP').val();
+
+            $.ajax({
+                url: 'https://viacep.com.br/ws/' + cep + '/json/',
+                dataType: 'json',
+                success: function (data) {
+                    if (!data.erro) {
+                        $('#ENDERECO_LOGRADOURO').val(data.logradouro);
+                        $('#ENDERECO_CIDADE').val(data.localidade);
+                        $('#ENDERECO_ESTADO').val(data.uf);
+                    } else {
+                        alert('CEP não encontrado. Verifique o CEP e tente novamente.');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(error);
+                    alert('Erro ao buscar CEP. Tente novamente.');
+                }
+            });
+        }
+
+        // Adicionado evento de clique para chamar a função buscarCep
+        $('#btnBuscarCep').click(function () {
+            buscarCep();
+        });
+    });
+</script>
+
+<p></p>
+<p></p>
+<p>&nbsp</p>
+<p></p>
+<p></p>
+<p>&nbsp</p>
+<p></p>
+<p></p>
+<p>&nbsp</p>
+
+<div class="principal-yt">
     <section>
-        <table>
-            <ol>
-                <li>
-                    <form action="{{route('endereco.store')}}"  method="POST">
-                      @csrf
-                      <div>
-                          <label for="">LOGRADOURO</label>
-                          <input class="inputLogin" type="text" name="ENDERECO_LOGRADOURO" required>
-                      </div>
-
-                        <div>
-                            <label for="">Nome(Ex:casa, trabalho e etc.)</label>
+        <div class="text-center">
+            <h1>Cadastro de Endereço</h1>
+        </div>
+        <div class="tabela-ty">
+            <form action="{{route('endereco.store')}}" method="POST">
+                @csrf
+                <table class="table">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">LOGRADOURO</th>
+                            <th scope="col">NUMERO</th>
+                            <th scope="col">COMPLEMENTO</th>
+                            <th scope="col">CEP</th>
+                            <th scope="col">CIDADE</th>
+                            <th scope="col">ESTADO</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <label for="ENDERECO_NOME">Nome(Ex: casa, trabalho)</label>
                             <input class="inputLogin" type="text" name="ENDERECO_NOME" required>
-                        </div>
-
-                        <div>
-                            <label for="">N° Residência</label>
+                        </td>
+                        <td>
+                            <label for="ENDERECO_LOGRADOURO">LOGRADOURO</label>
+                            <input class="inputLogin" type="text" name="ENDERECO_LOGRADOURO" required>
+                        </td>
+                        <td>
+                            <label for="ENDERECO_NUMERO">N° Residência</label>
                             <input class="inputLogin" type="text" name="ENDERECO_NUMERO" onkeypress="return semLetra(event)" required>
-                        </div>
-
-                        <div>
-                            <label for="">Complemento</label>
+                        </td>
+                        <td>
+                            <label for="ENDERECO_COMPLEMENTO">Complemento</label>
                             <input class="inputLogin" type="text" name="ENDERECO_COMPLEMENTO" required>
-                        </div>
-
-                        <div>
-                            <label for="">CEP</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_CEP" required minlength=8 maxlength=8 onkeypress="return semLetra(event)">
-                        </div>
-                        <div>
-                            <label for="">Cidade</label>
+                        </td>
+                        <td>
+                            <label for="ENDERECO_CEP">CEP</label>
+                            <input class="inputLogin" type="text" name="ENDERECO_CEP" required minlength=9 maxlength=9 onkeypress="return semLetra(event)">
+                            <button type="button" id="btnBuscarCep" class="btn btn-info">Buscar CEP</button>
+                        </td>
+                        <td>
+                            <label for="ENDERECO_CIDADE">Cidade</label>
                             <input class="inputLogin" type="text" name="ENDERECO_CIDADE" required>
-                        </div>
-                        <div>
-                            <label for="">Estado</label>
-                            <select  class="inputLogin" name="ENDERECO_ESTADO" required>
+                        </td>
+                        <td>
+                            <label for="ENDERECO_ESTADO">Estado</label>
+                            <select class="inputLogin" name="ENDERECO_ESTADO" required>
                                 <option value="">Selecione</option>
-                                <option value="AC">AC</option>
-                                <option value="AL">AL</option>
-                                <option value="AP">AP</option>
-                                <option value="AM">AM</option>
-                                <option value="BA">BA</option>
-                                <option value="CE">CE</option>
-                                <option value="DF">DF</option>
-                                <option value="ES">ES</option>
-                                <option value="GO">GO</option>
-                                <option value="MA">MA</option>
-                                <option value="MS">MS</option>
-                                <option value="MT">MT</option>
-                                <option value="MG">MG</option>
-                                <option value="PA">PA</option>
-                                <option value="PB">PB</option>
-                                <option value="PR">PR</option>
-                                <option value="PE">PE</option>
-                                <option value="PI">PI</option>
-                                <option value="RJ">RJ</option>
-                                <option value="RN">RN</option>
-                                <option value="RS">RS</option>
-                                <option value="RO">RO</option>
-                                <option value="RR">RR</option>
-                                <option value="SC">SC</option>
-                                <option value="SP">SP</option>
-                                <option value="SE">SE</option>
-                                <option value="TO">TO</option>
-                        </select>
-                        </div>
-                      <button type="submit" class="button-nxy">Inserir</button>
-                    </form>
-                </li>
-            </ol>
-        </table>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+
+                
+                <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button mx-auto" style="width: 300px;">Inserir endereço</button>
+            
+            </form>
+        </div>
     </section>
-    </div>
+</div>
 
 @endsection
