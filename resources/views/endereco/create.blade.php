@@ -67,9 +67,9 @@
                 <table class="table">
                     <thead class="table-secondary">
                         <tr>
-                            <th scope="col">Nome</th>
+                            <th scope="col">NOME (EX: Casa, Trabalho)</th>
                             <th scope="col">LOGRADOURO</th>
-                            <th scope="col">NUMERO</th>
+                            <th scope="col">NUMERO DA RESIDÊNCIA</th>
                             <th scope="col">COMPLEMENTO</th>
                             <th scope="col">CEP</th>
                             <th scope="col">CIDADE</th>
@@ -78,32 +78,33 @@
                     </thead>
                     <tr>
                         <td>
-                            <label for="ENDERECO_NOME">Nome(Ex: casa, trabalho)</label>
+                            <label for="ENDERECO_NOME">&nbsp</label>
                             <input class="inputLogin" type="text" name="ENDERECO_NOME" required>
                         </td>
                         <td>
-                            <label for="ENDERECO_LOGRADOURO">LOGRADOURO</label>
+                            <label for="ENDERECO_LOGRADOURO">&nbsp</label>
                             <input class="inputLogin" type="text" name="ENDERECO_LOGRADOURO" required>
                         </td>
                         <td>
-                            <label for="ENDERECO_NUMERO">N° Residência</label>
+                            <label for="ENDERECO_NUMERO">&nbsp</label>
                             <input class="inputLogin" type="text" name="ENDERECO_NUMERO" onkeypress="return semLetra(event)" required>
                         </td>
                         <td>
-                            <label for="ENDERECO_COMPLEMENTO">Complemento</label>
+                            <label for="ENDERECO_COMPLEMENTO">&nbsp &nbsp</label>
                             <input class="inputLogin" type="text" name="ENDERECO_COMPLEMENTO" required>
                         </td>
                         <td>
-                            <label for="ENDERECO_CEP">CEP</label>
+                            <label for="ENDERECO_CEP"></label>
                             <input class="inputLogin" type="text" name="ENDERECO_CEP" required minlength=9 maxlength=9 onkeypress="return semLetra(event)">
+                            <p></p>
                             <button type="button" id="btnBuscarCep" class="btn btn-info">Buscar CEP</button>
                         </td>
                         <td>
-                            <label for="ENDERECO_CIDADE">Cidade</label>
+                            <label for="ENDERECO_CIDADE">&nbsp</label>
                             <input class="inputLogin" type="text" name="ENDERECO_CIDADE" required>
                         </td>
                         <td>
-                            <label for="ENDERECO_ESTADO">Estado</label>
+                            <label for="ENDERECO_ESTADO">&nbsp</label>
                             <select class="inputLogin" name="ENDERECO_ESTADO" required>
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
