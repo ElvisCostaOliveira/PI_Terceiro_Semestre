@@ -7,7 +7,7 @@
     // Garante que o código JavaScript seja executado após o carregamento do DOM
     $(document).ready(function () {
         function semLetra(a) {
-            var x = a.which || e.keycode;
+            var x = a.which || a.keyCode;  // Corrigindo o acesso à propriedade keyCode
             if ((x >= 48 && x <= 57) || (x == 44)) {
                 return true;
             } else {
@@ -16,27 +16,41 @@
         }
 
         function buscarCep() {
-            var cep = $('#ENDERECO_CEP').val();
+                var cep = $('#ENDERECO_CEP').val();
 
-            $.ajax({
-                url: 'https://viacep.com.br/ws/' + cep + '/json/',
-                dataType: 'json',
-                success: function (data) {
-                    if (!data.erro) {
-                        $('#ENDERECO_LOGRADOURO').val(data.logradouro);
-                        $('#ENDERECO_CIDADE').val(data.localidade);
-                        $('#ENDERECO_ESTADO').val(data.uf);
-                    } else {
-                        alert('CEP não encontrado. Verifique o CEP e tente novamente.');
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.log(xhr);
-                    console.log(status);
-                    console.log(error);
-                    alert('Erro ao buscar CEP. Tente novamente.');
+                console.log('CEP:', cep); // Adiciona essa linha para exibir o valor do CEP no console
+
+                // Verifica se o CEP possui o formato esperado
+                if (/^\d{8}$/.test(cep)) {
+                    $.ajax({
+                        url: 'http://viacep.com.br/ws/' + cep + '/json/',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (!data.erro) {
+                                $('#ENDERECO_LOGRADOURO').val(data.logradouro);
+                                $('#ENDERECO_CIDADE').val(data.localidade);
+                                $('#ENDERECO_ESTADO').val(data.uf);
+                            } else {
+                                alert('CEP não encontrado. Verifique o CEP e tente novamente.');
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(xhr);
+                            console.log(status);
+                            console.log(error);
+                            alert('Erro ao buscar CEP. Tente novamente.');
+                        }
+                    });
+                } else {
+                    alert('Informe um CEP válido antes de buscar.');
                 }
-            });
+            }
+
+
+
+
+        function submitForm() {
+            $('form').submit();
         }
 
         // Adicionado evento de clique para chamar a função buscarCep
@@ -45,6 +59,7 @@
         });
     });
 </script>
+
 
 <p></p>
 <p></p>
@@ -143,8 +158,8 @@
                 </table>
 
                 
-                <button type="submit" class="btn btn-warning btn-block buttonLogin fixed-width-button mx-auto" style="width: 300px;">Inserir endereço</button>
-            
+                <button type="button" class="btn btn-warning btn-block buttonLogin fixed-width-button mx-auto" style="width: 300px;" onclick="submitForm()">Inserir endereço</button>
+
             </form>
         </div>
     </section>
