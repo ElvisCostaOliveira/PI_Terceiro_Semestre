@@ -95,7 +95,7 @@
                         </td>
                         <td>
                             <label for="ENDERECO_CEP"></label>
-                            <input class="inputLogin" type="text" name="ENDERECO_CEP" required minlength=9 maxlength=9 onkeypress="return semLetra(event)">
+                            <input class="inputLogin" type="text" name="ENDERECO_CEP" required minlength=8 maxlength=8 onkeypress="return semLetra(event)">
                             <p></p>
                             <button type="button" id="btnBuscarCep" class="btn btn-info">Buscar CEP</button>
                         </td>
