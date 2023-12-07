@@ -13,6 +13,7 @@ class CarrinhoController extends Controller
     public function index(){
         $carrinho = Carrinho::where('USUARIO_ID',Auth::user()->USUARIO_ID)->get();
         return view ('carrinho.store')->with('carrinho',$carrinho);
+        
     }
 
     public function store(Produto $produto, Request $request){

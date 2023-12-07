@@ -165,7 +165,7 @@
         // Login bem-sucedido
         showAlert('success', 'Login bem-sucedido!');
         // Redirecione para a página store.blade
-        window.location.href = '/carrinho';
+        window.location.href = '/';
     },
                 error: function () {
                     // Login incorreto

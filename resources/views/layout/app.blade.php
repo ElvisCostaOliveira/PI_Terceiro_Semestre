@@ -148,7 +148,6 @@
                                         <!-- Notificação de carrinho -->
                                         <li class="m-nav__item">
                                             <a href="/carrinho" class="m-nav__link" tabindex="0">
-                                                <span class="m-nav__link-badge m-badge m-badge--success">0</span>
                                                 <span class="m-nav__link-icon">
                                                     <span class="m-nav__link-icon-wrapper">
                                                         <i class="flaticon-cart">
@@ -311,38 +310,33 @@
         <main>@yield('main')</main>
 
         <script>
-                  r zoom = 100;
+            var zoom = 100;
             var contrast = false;
-            wind                istener("load", function (event)                       
-            zoom = parseInt(window.localStorage.getItem('zoom'|              
-            document.body.style.zoom = z                                
-            con                
-            ow.localStor                    
-            trast') == 'true' ? true : false;
-                     f (contrast == t                                    
-                     ontrast = false;
-                    t                    
+            window.addEventListener("load", function (event) {
+                zoom = parseInt(window.localStorage.getItem('zoom')) || 100;
+                document.body.style.zoom = zoom + '%';
+                contrast = window.localStorage.getItem('contrast') == 'true' ? true : false;
+                if (contrast == true) {
+                    contrast = false;
+                    toggleContrast();
                 }
-                                 
-                function zoomOut() {
-                           m > 100) {
-                        zoom = zoom - 10;
-                    window.localStorage.set                 
-                    zoom);
-                    docum            
-                    .style.zoom = zoom + '%';
+            });
+            function zoomOut() {
+                if (zoom > 100) {
+                    zoom = zoom - 10;
+                    window.localStorage.setItem('zoom', zoom);
+                    document.body.style.zoom = zoom + '%';
                 }
             }
-
-        function zoomIn() {
+            function zoomIn() {
                 if (zoom < 150) {
                     zoom = zoom + 10;
                     window.localStorage.setItem('zoom', zoom);
                     document.body.style.zoom = zoom + '%';
                 }
             }
-
-            function toggleContrast(    contrast = !contrast;
+            function toggleContrast() {
+                contrast = !contrast;
                 window.localStorage.setItem('contrast', contrast);
                 $(document.body).toggleClass('contrast');
             }

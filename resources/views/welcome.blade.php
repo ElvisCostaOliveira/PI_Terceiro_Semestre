@@ -141,14 +141,15 @@
                                                             </span>
                                                         </span>
                                                     </div>
-                                                </div>
+                                                </div>  
                                             </form>
-                                        </li>
+                                        </li>   
 
                                         <!-- Notificação de carrinho -->
+                                        
+                                        
                                         <li class="m-nav__item">
                                             <a href="/carrinho" class="m-nav__link" tabindex="0">
-                                                <span class="m-nav__link-badge m-badge m-badge--success">0</span>
                                                 <span class="m-nav__link-icon">
                                                     <span class="m-nav__link-icon-wrapper">
                                                         <i class="flaticon-cart">
@@ -160,6 +161,8 @@
                                                 </span>
                                             </a>
                                         </li>
+                                                
+                                                
 
 
                                         <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
