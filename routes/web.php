@@ -47,7 +47,7 @@ Route::get('/todos', function () {
 
 });
 
-
+Route::delete('/carrinho/{produto}',[CarrinhoController::class,'delete'])->name('carrinho.remove');
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 

@@ -5,6 +5,11 @@
     {{session()->get('message')}}
 @endif
 
+    <style>
+        .form-control{
+            color: blue;
+        }
+    </style>
         <div class="principal-typ">
             <form action="{{route('usuarios.update',['user'=>$user->USUARIO_ID])}}" method="post" >
 
