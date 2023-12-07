@@ -8,13 +8,21 @@
        margin-top: 3%;
         position: relative;
     }
+    #invisivel {
+        display: none;
+    }
+
+    .img-carrinho {
+        max-height: 100px;
+        width: 50px; 
+    }
 
 </style>
+<p></p>
+<p></p>
 <hr size="10">
 <h1 class="fw-bold mb-0 text-black">Pedido de Nº{{$pedido->PEDIDO_ID}}</h1>
   <h6 class="mb-0 text-muted">Data do pedido:{{$pedido->PEDIDO_DATA}} </h6>
-
-
 
     @foreach($pedido->peditoItem as $item)
     @if($item->ITEM_QTD> 0)
@@ -28,13 +36,7 @@
     </div>
 
     @endif
-
-
       @endforeach
-
-
-
-
 
 @endforeach
 @endsection
