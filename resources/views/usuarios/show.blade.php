@@ -6,6 +6,7 @@
       margin-left:500px; 
       font-size:20px;
     }
+    
     .posição-titulo{
       margin-left:80px; 
       margin-top:100px; 
@@ -14,12 +15,17 @@
     .info{
       padding-right:50px; 
       border:1px solid black; 
-      padding:0px 20px 0px 20px; 
+padding:0px 20px 0px 20px; 
       text-align:center;
     }
     .voltar{
       margin-left:200px; margin-top:20px;
     }
+    .btn-dark{
+background:red;
+    }
+    
+ 
 </style>
 
 <div class="principal-poy">
@@ -33,7 +39,7 @@
       </tr>
 
 
-      <t>
+      <tr>
         <td class="info">{{$user->USUARIO_NOME}}</td>
         <td class="info">{{$user->USUARIO_EMAIL}}</td>
         <td class="info">{{$user->USUARIO_CPF}}</td>
